@@ -22,7 +22,7 @@ PIC
 
 VIDEO 
 
-###Sample Code in Void loop.  
+<bold>Sample Code in Void loop</bold>  
 ```
 void loop() {
   digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
@@ -32,10 +32,13 @@ void loop() {
 }
 ```
 
-###Example4_Serial
+<bold>Example4_Serial</bold>  
 For this example, I navigated to "Examples for RedBoard Artemis Nano" and selected "Example4_Serial" under Apollo3. I verified the code and uploaded it onto the board. 
 Initially, when I uploaded the code onto the board, and pulled up the Serial Monitor, "gibberish" was displayed in the monitor. To fix this, the TA suggested increasing the baud rate so I tried adjusting the baud rate (rate of data transmission across the serial channel). Initially, the baud rate was around 9600, so I bumped it up gradually till I settled on 115200 baud. At this baud rate, I finally got intelligible outputs. 
 
 In the Serial Monitor, I was able to type some inputs and they were displayed directly in the Serial monitor after the outputs from uploading "Example4_Serial". See below for pics. 
 
 PIC OF OUTPUT FROM SERIAL MONITOR
+
+<bold>Example2_analogRead</bold>
+
