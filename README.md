@@ -2,24 +2,26 @@
 
 This lab was divided into two parts. The first part of the lab was meant to help us familiarize ourselves with the Arduino IDE ad the Artemis board. The second part of the lab had to do with establishing communication between your computer and teh Artemis board through bluetooth. 
 
-## PARTS REQUIRED 
+<b>PARTS REQUIRED</b> 
 - 1 x SparkFun RedBoard Artemis Nano
 - 1 x USB C-to-C or A-to-C cable
 
 ## PART 1 
-The objective of part 1 is to setup and become familiar with the Arduino IDE and the Artemis board. 
+In Part 1, we aimed to set up and familiarize ourselves with the Arduino IDE and the Artemis board.
 
-To get started, we installed the Arduino IDE. I already had a previous installation so I just updated it. Since we would be using the SparkFun RedBoard Artemis Nano board for the class, we needed to install board support packages within the Arduino IDE. For our board, we installed the <b>SparkFun Apollo3 Arduino Core</b> by using the Additional Board Manager URL feature in the Arduino IDE (This process was quite straightforward). Then, we proceeded to install the latest version of the SparkFun Apollo3 board package using the board manager tool in the IDE. 
-After the SparkFun Artemis board definitions had been installed, I proceeded to select the "RedBoard Artemis Nano" in the list of SparkFun Apollo3 boards. 
+First, we installed the Arduino IDE, updating it if necessary. Then, we ensured compatibility with the SparkFun RedBoard Artemis Nano board by installing the <em>SparkFun Apollo3 Arduino Core</em> via the Additional Board Manager URL feature in the IDE. Following this, we installed the latest version of the SparkFun Apollo3 board package using the IDE's board manager tool.
 
-Now, the right SparkFun Arduino Core and board packages have been installed, so we proceeded to test the board with some simple projects. 
+With the SparkFun Artemis board definitions in place, we selected "RedBoard Artemis Nano" from the list of SparkFun Apollo3 boards. This completed our setup.
+
+We then proceeded to test the board with simple projects.
 
 ### Blink It Up!  
 This example was more like a proof of concept as its implementation is very simple and can be immediately verified on the board. I hooked up the Artemis board to my computer via the  USB C-to-C cable and loaded the "Blink" project in the Built-in Examples section in the Arduino IDE onto the board.  
 
 #### Implementation 
-The code implementation for "Blink" involves setting the board's built-in LED pin to 'HIGH" and "LOW" with a delay of 1000 between them. Since this code is implemented in the void loop, the process repeats and we see the built-in LED blinking. 
-After loading the "Blink" project, I first verified (hit the verify button) the code to ensure that it correctly compiles, then I hit the upload button to load the code onto the Artemis board. After loading is done, the LED (the light is blue in color) starts blinking. See below. 
+The "Blink" code toggles the board's built-in LED pin between 'HIGH' and 'LOW' states with a 1000ms (1 second) delay, creating a blinking effect. Implemented in the void loop, this process repeats indefinitely, resulting in the LED blinking continuously.
+
+To execute the "Blink" project, I first verified the code to ensure proper compilation and then uploaded it onto the Artemis board. Upon completion of the upload process, the blue LED begins blinking as intended.
 
 PIC 
 
@@ -43,6 +45,7 @@ Initially, when I uploaded the code onto the board, and pulled up the Serial Mon
 In the Serial Monitor, I was able to type some inputs and they were displayed directly in the Serial monitor after the outputs from uploading "Example4_Serial". See below for pics. 
 
 PIC OF OUTPUT FROM SERIAL MONITOR
+
 
 ### Example2_analogRead - Testing the temperature sensor 
 This example was meant to test the on-board temperature sensor. After verifying and uploading this code onto the board, I pulled up the Serial monitor to see the temperature values being read by the temperature sensor on the board. 
@@ -113,6 +116,71 @@ tx_estring_value.append((int)millis());
 tx_characteristic_string.writeValue(tx_estring_value.c_str());
 Serial.println(tx_estring_value.c_str());
 ```
+
+PIC 
+
+
+### NOTIFICATION HANDLER
+When the <em>GET_TIME_MILLIS</em> command is called, the computer gets a string of the form "T:XXXXXX" from the Artemis board where "XXXXXX" is the time. We want to be able to get the time from the string received, so implemented a notification handler that essentially receives the string, splits it at the <em>":"</em> character and extracts the second part of the string, which is the time in this case. I have a helper function <em>extract_time()</em> that I use in my notification handler for parsing the string received and extracting the time. Due to the amount of data been received, the notifcation handler stores the time string in an array that is defined in the global scope and can be accessed easily. 
+
+``` 
+def notification_handler(uuid, byte_array_data):
+    global time_data
+    string_value = ble.bytearray_to_string(byte_array_data)
+    extracted_time = extract_time(string_value) 
+    time_data.append(extracted_time)
+```
+
+### GET CURRENT TIME 
+For this task, we had to collect and send the current time in milliseconds from Artemis to the computer to be processed by the notification handler. 
+
+#### Implementation 
+I created the command "GET_CURRENT_TIME" which consists of a while loop that runs for five seconds, collecting the current time in milliseconds and sending it to the computer to be handled by the notification handler. The string sent to the computer is of the form <em>"T:<current time>"</em>. While the current time is of type 'long', I converted to int before sending the data. 
+
+```
+case GET_CURRENT_TIME:
+  previousMillis = millis();
+  while (millis() - previousMillis < 5000) {
+    tx_estring_value.clear();
+    tx_estring_value.append("T:");
+    tx_estring_value.append((int)millis());
+    tx_characteristic_string.writeValue(tx_estring_value.c_str());
+          }
+```
+
+In order to find the data transfer rate, I stored the timestamps received in a Python list, and calculated the total number of strings received as well as the total number of bytes. Using the first and last timestamps in the list, I was able to calculate the time elapsed. With the time elapsed and number of strings sent to the conputer, I calculated the data transfer rate. 
+
+
+### STORE TIMESTAMPS 
+In the "GET_CURRENT_TIME" command, each timestamp was sent individually from Artemis to the computer over a certain time period. For this task, instead of sending each string one by one, I stored all the timestamps in an array and implemented the "SEND_TIME_DATA" command to loop through this array and send each string to the computer to be processed by the notification handler. 
+
+#### Implementation 
+First, I implemented a <em>"STORE_TIME"</em> command that populates an array of fixed size in the global scope. Then, I implemented the <em>"SEND_TIME_DATA"</em> command to loop through this array and send the string data to the computer. I used an array size of 1500 for my implementation. On the Python size (in jupyter lab), I was able to collate all the string data received and verify that all the data has been received. 
+
+
+### GET TEMPERATURE READINGS 
+This task is similar to the storing time stamps task, so the implementation is alike. Here, I instantiated an array of the same size as that for collating timestamps, then in my "STORE_TIME" command, I also collated the current temperature and stored it in my temperature array which is defined in the global scope just like the time array. 
+Then, in my "SEND_TIME_DATA" command, I created an EString of the form <em>"<time stamp>-<temperature>"</em>, and transmitted it to the computer. To extract the time and temperature and store it in different arrays, I implemented a new notification handler to parse strings with the new format specified above. The handler simply splits the string received at the "-" symbol and stores the extracted time and temperature in a time and temperature array defined in the global scope. My notification handler uses a helper function (extract_temp_time()) that extracts the time and temperature data. See code snippet below. 
+
+```
+def notification_handler_2(uuid, byte_array_data):
+  string_value = ble.bytearray_to_string(byte_array_data)
+  extracted_info = extract_temp_time(string_value)
+  if extracted_info and len(extracted_info) == 2:
+      time_val, temp_val = extracted_info[0], extracted_info[1]
+      times.append(time_val)
+      temps.append(temp_val)
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
