@@ -47,6 +47,7 @@ Initially, when I uploaded the code onto the board, and pulled up the Serial Mon
 In the Serial Monitor, I was able to type some inputs and they were displayed directly in the Serial monitor after the outputs from uploading "Example4_Serial". See below for pics. 
 
 PIC OF OUTPUT FROM SERIAL MONITOR
+<img width="824" alt="Example04_Serial" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/3c2e23c3-bdc5-4d98-aac4-ad6c1cfab7aa">
 
 
 ### Example2_analogRead - Testing the temperature sensor 
@@ -59,8 +60,10 @@ To test the sensor, I decided to press my index finger on the chip to transfer h
 In an attempt to observe an appreciable change in the temperature, I proceeded to blow hot air onto the board instead. After a few seconds of doing this, I observed a slight change in the readings. See below for before and after pics. 
 
 Pic - before 
+<img width="1564" alt="temp1" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/4dc23e43-3133-4833-b400-231e81606d97">
 
 Pic - after 
+<img width="1521" alt="temp2-inc" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/78081df2-57ac-416e-b233-773c4438ba4f">
 
 From the pics above, you would observe that the temperature readings changed from "32- - -" to "33- - -" after hot air was blown onto the board. 
 
@@ -69,8 +72,10 @@ After uploading the code onto the board, I pulled up the serial monitor and obse
 To test the microphone, I brought my mouth close to the board and started speaking. Immediately, I noticed appreciable changes in the frequency recorded. I wanted to record a higher frequency so I tried whistling too and the results were even more noticeable. By whistling, I was able to get the loudest frequency recorded to about 1258 from around 912 (through speaking). See below for microphone readings 
 
 Before 
+<img width="554" alt="mic-low" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/02204e29-f897-40fe-9a96-c3654023912c">
 
 After 
+<img width="579" alt="mic-high" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ead84c48-9a0d-477f-b9af-68b4a0dc5031">
 
 
 ## PART 2 
@@ -102,6 +107,7 @@ tx_characteristic_string.writeValue(tx_estring_value.c_str());
 Serial.println(tx_estring_value.c_str());
 ```
 PIC- sample output 
+<img width="1182" alt="hey-there" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/76fdc7ca-dfe0-4fda-99de-c4b05699c638">
 
 In the code above, "Hey there!" is sent to the Artemis, "Robot says -> " is appended to get an augmented output which is received on the Python side when ```ble.receive_string(ble.uuid['RX_STRING'])``` is called. "Robot says -> Hey there!" is displayed in the serial monitor and also returned when the code above is called in jupyter lab. 
 
@@ -120,6 +126,7 @@ Serial.println(tx_estring_value.c_str());
 ```
 
 PIC 
+<img width="522" alt="get_time_millis" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/becbbf02-17cb-4be6-875f-9ebe383a0a84">
 
 
 ### NOTIFICATION HANDLER
