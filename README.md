@@ -23,11 +23,8 @@ The "Blink" code toggles the board's built-in LED pin between 'HIGH' and 'LOW' s
 
 To execute the "Blink" project, I first verified the code to ensure proper compilation and then uploaded it onto the Artemis board. Upon completion of the upload process, the blue LED begins blinking as intended.
 
-PIC 
-  <img src="images/blink-.png" width="500">
-
 VIDEO 
-[Imgur](https://imgur.com/SngHCKx)
+[Imgur](https://imgur.com/SngHCKx)  
 
 #### Sample Code in Void loop
 
@@ -60,10 +57,10 @@ To test the sensor, I decided to press my index finger on the chip to transfer h
 #### Test 2 - Blowing hot air on chip
 In an attempt to observe an appreciable change in the temperature, I proceeded to blow hot air onto the board instead. After a few seconds of doing this, I observed a slight change in the readings. See below for before and after pics. 
 
-Before blowing on chip
+#### Before blowing on chip  
 <img src="docs/images/temp1.png" width="500">
 
-When blowing on chip
+#### When blowing on chip  
 <img src="docs/images/temp2-inc.png" width="500">
 
 From the pics above, you would observe that the temperature readings changed from "32- - -" to "33- - -" after hot air was blown onto the board. 
@@ -72,10 +69,10 @@ From the pics above, you would observe that the temperature readings changed fro
 After uploading the code onto the board, I pulled up the serial monitor and observed the microphone frequency readings. Due to the ambient noise i the lab, the lowest frequency I observed had a magnitude of about 125. 
 To test the microphone, I brought my mouth close to the board and started speaking. Immediately, I noticed appreciable changes in the frequency recorded. I wanted to record a higher frequency so I tried whistling too and the results were even more noticeable. By whistling, I was able to get the loudest frequency recorded to about 1258 from around 912 (through speaking). See below for microphone readings 
 
-Before speaking 
+#### Before speaking   
 <img src="docs/images/mic-low.png" width="500">
 
-During speaking 
+#### During speaking  
 <img src="docs/images/mic-high.png" width="500">
 
 ## PART 2 
@@ -107,10 +104,9 @@ tx_characteristic_string.writeValue(tx_estring_value.c_str());
 Serial.println(tx_estring_value.c_str());
 ```
 
-<img src="docs/images/hello-there.png" width="500">
+<img src="docs/images/hello-there.png" width="500">  
 
-<img src="docs/images/serial-monitor-hello.png" width="500">
-
+<img src="docs/images/serial-monitor-hello.png" width="500">  
 
 In the code above, "Hey there!" is sent to the Artemis, "Robot says -> " is appended to get an augmented output which is received on the Python side when ```ble.receive_string(ble.uuid['RX_STRING'])``` is called. "Robot says -> Hey there!" is displayed in the serial monitor and also returned when the code above is called in jupyter lab. 
 
@@ -128,7 +124,7 @@ tx_characteristic_string.writeValue(tx_estring_value.c_str());
 Serial.println(tx_estring_value.c_str());
 ```
 
-<img src="docs/images/get_time_millis.png" width="500">
+<img src="docs/images/get_time_millis.png" width="500">  
 
 ### NOTIFICATION HANDLER
 When the <em>GET_TIME_MILLIS</em> command is called, the computer gets a string of the form "T:XXXXXX" from the Artemis board where "XXXXXX" is the time. We want to be able to get the time from the string received, so implemented a notification handler that essentially receives the string, splits it at the <em>":"</em> character and extracts the second part of the string, which is the time in this case. I have a helper function <em>extract_time()</em> that I use in my notification handler for parsing the string received and extracting the time. Due to the amount of data been received, the notifcation handler stores the time string in an array that is defined in the global scope and can be accessed easily. 
@@ -181,6 +177,8 @@ def notification_handler_2(uuid, byte_array_data):
       times.append(time_val)
       temps.append(temp_val)
 ```
+
+
 
 
 
