@@ -27,7 +27,7 @@ PIC
   <img src="images/blink-.png" width="500">
 
 VIDEO 
-[![Watch the video](https://imgur.com/6vtuFYX)]
+[Imgur](https://imgur.com/SngHCKx)
 
 #### Sample Code in Void loop
 
