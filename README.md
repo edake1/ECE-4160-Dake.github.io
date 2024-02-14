@@ -48,7 +48,8 @@ In the Serial Monitor, I was able to type some inputs and they were displayed di
 
 PIC OF OUTPUT FROM SERIAL MONITOR
 <img width="824" alt="Example04_Serial" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/3c2e23c3-bdc5-4d98-aac4-ad6c1cfab7aa">
-
+small
+<img src="docs/images/Example04_Serial.png" width="500">
 
 ### Example2_analogRead - Testing the temperature sensor 
 This example was meant to test the on-board temperature sensor. After verifying and uploading this code onto the board, I pulled up the Serial monitor to see the temperature values being read by the temperature sensor on the board. 
@@ -61,6 +62,8 @@ In an attempt to observe an appreciable change in the temperature, I proceeded t
 
 Pic - before 
 <img width="1564" alt="temp1" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/4dc23e43-3133-4833-b400-231e81606d97">
+<img src="docs/images/temp1.png" width="500">
+
 
 Pic - after 
 <img width="1521" alt="temp2-inc" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/78081df2-57ac-416e-b233-773c4438ba4f">
