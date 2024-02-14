@@ -46,10 +46,10 @@ Initially, when I uploaded the code onto the board, and pulled up the Serial Mon
 
 In the Serial Monitor, I was able to type some inputs and they were displayed directly in the Serial monitor after the outputs from uploading "Example4_Serial". See below for pics. 
 
-PIC OF OUTPUT FROM SERIAL MONITOR
-<img width="824" alt="Example04_Serial" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/3c2e23c3-bdc5-4d98-aac4-ad6c1cfab7aa">
-small
 <img src="docs/images/Example04_Serial.png" width="500">
+
+<img src="docs/images/serial_adding_text.png" width="500">
+
 
 ### Example2_analogRead - Testing the temperature sensor 
 This example was meant to test the on-board temperature sensor. After verifying and uploading this code onto the board, I pulled up the Serial monitor to see the temperature values being read by the temperature sensor on the board. 
@@ -60,13 +60,9 @@ To test the sensor, I decided to press my index finger on the chip to transfer h
 #### Test 2 - Blowing hot air on chip
 In an attempt to observe an appreciable change in the temperature, I proceeded to blow hot air onto the board instead. After a few seconds of doing this, I observed a slight change in the readings. See below for before and after pics. 
 
-Pic - before 
-<img width="1564" alt="temp1" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/4dc23e43-3133-4833-b400-231e81606d97">
 <img src="docs/images/temp1.png" width="500">
 
-
-Pic - after 
-<img width="1521" alt="temp2-inc" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/78081df2-57ac-416e-b233-773c4438ba4f">
+<img src="docs/images/temp2-inc.png" width="500">
 
 From the pics above, you would observe that the temperature readings changed from "32- - -" to "33- - -" after hot air was blown onto the board. 
 
@@ -74,12 +70,9 @@ From the pics above, you would observe that the temperature readings changed fro
 After uploading the code onto the board, I pulled up the serial monitor and observed the microphone frequency readings. Due to the ambient noise i the lab, the lowest frequency I observed had a magnitude of about 125. 
 To test the microphone, I brought my mouth close to the board and started speaking. Immediately, I noticed appreciable changes in the frequency recorded. I wanted to record a higher frequency so I tried whistling too and the results were even more noticeable. By whistling, I was able to get the loudest frequency recorded to about 1258 from around 912 (through speaking). See below for microphone readings 
 
-Before 
-<img width="554" alt="mic-low" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/02204e29-f897-40fe-9a96-c3654023912c">
+<img src="docs/images/mic-low.png" width="500">
 
-After 
-<img width="579" alt="mic-high" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ead84c48-9a0d-477f-b9af-68b4a0dc5031">
-
+<img src="docs/images/mic-high.png" width="500">
 
 ## PART 2 
 The purpose of part two of this lab is to establish communication between your computer and the Artemis board through the Bluetooth stack.
@@ -109,8 +102,11 @@ tx_estring_value.append(char_arr);
 tx_characteristic_string.writeValue(tx_estring_value.c_str());
 Serial.println(tx_estring_value.c_str());
 ```
-PIC- sample output 
-<img width="1182" alt="hey-there" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/76fdc7ca-dfe0-4fda-99de-c4b05699c638">
+
+<img src="docs/images/hello-there.png" width="500">
+
+<img src="docs/images/serial-monitor-hello.png" width="500">
+
 
 In the code above, "Hey there!" is sent to the Artemis, "Robot says -> " is appended to get an augmented output which is received on the Python side when ```ble.receive_string(ble.uuid['RX_STRING'])``` is called. "Robot says -> Hey there!" is displayed in the serial monitor and also returned when the code above is called in jupyter lab. 
 
@@ -128,9 +124,7 @@ tx_characteristic_string.writeValue(tx_estring_value.c_str());
 Serial.println(tx_estring_value.c_str());
 ```
 
-PIC 
-<img width="522" alt="get_time_millis" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/becbbf02-17cb-4be6-875f-9ebe383a0a84">
-
+<img src="docs/images/get_time_millis.png" width="500">
 
 ### NOTIFICATION HANDLER
 When the <em>GET_TIME_MILLIS</em> command is called, the computer gets a string of the form "T:XXXXXX" from the Artemis board where "XXXXXX" is the time. We want to be able to get the time from the string received, so implemented a notification handler that essentially receives the string, splits it at the <em>":"</em> character and extracts the second part of the string, which is the time in this case. I have a helper function <em>extract_time()</em> that I use in my notification handler for parsing the string received and extracting the time. Due to the amount of data been received, the notifcation handler stores the time string in an array that is defined in the global scope and can be accessed easily. 
