@@ -60,8 +60,10 @@ To test the sensor, I decided to press my index finger on the chip to transfer h
 #### Test 2 - Blowing hot air on chip
 In an attempt to observe an appreciable change in the temperature, I proceeded to blow hot air onto the board instead. After a few seconds of doing this, I observed a slight change in the readings. See below for before and after pics. 
 
+Before blowing on chip
 <img src="docs/images/temp1.png" width="500">
 
+When blowing on chip
 <img src="docs/images/temp2-inc.png" width="500">
 
 From the pics above, you would observe that the temperature readings changed from "32- - -" to "33- - -" after hot air was blown onto the board. 
@@ -70,8 +72,10 @@ From the pics above, you would observe that the temperature readings changed fro
 After uploading the code onto the board, I pulled up the serial monitor and observed the microphone frequency readings. Due to the ambient noise i the lab, the lowest frequency I observed had a magnitude of about 125. 
 To test the microphone, I brought my mouth close to the board and started speaking. Immediately, I noticed appreciable changes in the frequency recorded. I wanted to record a higher frequency so I tried whistling too and the results were even more noticeable. By whistling, I was able to get the loudest frequency recorded to about 1258 from around 912 (through speaking). See below for microphone readings 
 
+Before speaking 
 <img src="docs/images/mic-low.png" width="500">
 
+During speaking 
 <img src="docs/images/mic-high.png" width="500">
 
 ## PART 2 
