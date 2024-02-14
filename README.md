@@ -27,7 +27,7 @@ PIC
   <img src="images/blink-.png" width="500">
 
 VIDEO 
-[![Blink](images/blink-up.mp4)
+[![Blink](docs/images/blink-up.mp4)
 
 #### Sample Code in Void loop
 
