@@ -190,7 +190,11 @@ def notification_handler_2(uuid, byte_array_data):
 <img width="778" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/62411ae8-c376-4671-85ba-175955ebae3c">
 
 ### Differences between the two methods of sending the time and temperature data 
+The first method involves transmitting timestamps as they are generated, offering real-time updates crucial for immediate responses in applications requiring real-time data. This method minimizes latency between data generation and transmission, with minimal buffering delays. Additionally, it conserves memory as timestamps are not stored, ensuring efficient memory usage.
 
+Contrarily, the second method necessitates storing timestamps, consuming memory resources. Transmitting data under this method incurs considerable latency as timestamps are buffered before transmission. There's also a risk of exceeding memory limits, especially with large datasets.
+
+Comparative analysis of effective data transmission rates, as calculated (refer to related pictures above), suggests that storing data before transmission might significantly outpace transmitting data as it's generated.
 
 ### Communication between computer and Artemis 
 The computer communicates with the Artemis board via Bluetooth® LE, which is optimized for low power usage, making it ideal for the Artemis. The Artemis contains an onboard BLE module enabling it to connect with BLE-enabled computers. It advertises its presence through advertising packets, allowing the computer to establish a connection. Once connected, the computer communicates exclusively with the Artemis board using its MAC address. The Artemis acts as a bulletin board, updating and transmitting information, while the computer, acting as the central device, reads any data posted by the board. In jupyter lab, we use a command like <em>ble.connect()</em> to establish a connection with an Artemis board with the MAC address specified in the <em>connections.yml</em> file, and use several <em>ble commands</em> to receive different kinds of data (i.e. strings, integers, floats, etc) from the Artemis board. 
