@@ -188,6 +188,7 @@ def notification_handler_2(uuid, byte_array_data):
 ```
 #### Data transfer rate 
 <img width="657" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/c1f647c8-0421-4191-aaf3-1232bead6467">
+<img width="778" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/62411ae8-c376-4671-85ba-175955ebae3c">
 
 ### Differences between the two methods of sending the time and temperature data 
 
