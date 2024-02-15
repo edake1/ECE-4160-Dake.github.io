@@ -196,6 +196,8 @@ Contrarily, the second method necessitates storing timestamps, consuming memory 
 
 Comparative analysis, based on calculated effective data transmission rates (refer to related pictures above), indicates that storing data before transmission significantly outperforms transmitting data as it's generated. The raw data suggests that the second method of transmission may be approximately 45 times faster than the first method.
 
+If the Artemis board has a RAM capacity of <em>384kB</em>, it will exhaust its memory after storing approximately <em>2560 strings</em>, assuming each string reaches the maximum size of around 150 bytes.
+
 ### Communication between computer and Artemis 
 The computer communicates with the Artemis board via Bluetooth® LE, which is optimized for low power usage, making it ideal for the Artemis. The Artemis contains an onboard BLE module enabling it to connect with BLE-enabled computers. It advertises its presence through advertising packets, allowing the computer to establish a connection. Once connected, the computer communicates exclusively with the Artemis board using its MAC address. The Artemis acts as a bulletin board, updating and transmitting information, while the computer, acting as the central device, reads any data posted by the board. In jupyter lab, we use a command like <em>ble.connect()</em> to establish a connection with an Artemis board with the MAC address specified in the <em>connections.yml</em> file, and use several <em>ble commands</em> to receive different kinds of data (i.e. strings, integers, floats, etc) from the Artemis board. 
 
