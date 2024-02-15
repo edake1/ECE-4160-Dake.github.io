@@ -189,6 +189,9 @@ def notification_handler_2(uuid, byte_array_data):
 #### Data transfer rate 
 <img width="657" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/c1f647c8-0421-4191-aaf3-1232bead6467">
 
+### Differences between the two methods of sending the time and temperature data 
+
+
 ### Communication between computer and Artemis 
 The computer communicates with the Artemis board via Bluetooth® LE, which is optimized for low power usage, making it ideal for the Artemis. The Artemis contains an onboard BLE module enabling it to connect with BLE-enabled computers. It advertises its presence through advertising packets, allowing the computer to establish a connection. Once connected, the computer communicates exclusively with the Artemis board using its MAC address. The Artemis acts as a bulletin board, updating and transmitting information, while the computer, acting as the central device, reads any data posted by the board. In jupyter lab, we use a command like <em>ble.connect()</em> to establish a connection with an Artemis board with the MAC address specified in the <em>connections.yml</em> file, and use several <em>ble commands</em> to receive different kinds of data (i.e. strings, integers, floats, etc) from the Artemis board. 
 
