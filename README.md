@@ -194,7 +194,7 @@ The first method involves transmitting timestamps as they are generated, offerin
 
 Contrarily, the second method necessitates storing timestamps, consuming memory resources. Transmitting data under this method incurs considerable latency as timestamps are buffered before transmission. There's also a risk of exceeding memory limits, especially with large datasets.
 
-Comparative analysis of effective data transmission rates, as calculated (refer to related pictures above), suggests that storing data before transmission might significantly outpace transmitting data as it's generated.
+Comparative analysis, based on calculated effective data transmission rates (refer to related pictures above), indicates that storing data before transmission significantly outperforms transmitting data as it's generated. The raw data suggests that the second method of transmission may be approximately 45 times faster than the first method.
 
 ### Communication between computer and Artemis 
 The computer communicates with the Artemis board via Bluetooth® LE, which is optimized for low power usage, making it ideal for the Artemis. The Artemis contains an onboard BLE module enabling it to connect with BLE-enabled computers. It advertises its presence through advertising packets, allowing the computer to establish a connection. Once connected, the computer communicates exclusively with the Artemis board using its MAC address. The Artemis acts as a bulletin board, updating and transmitting information, while the computer, acting as the central device, reads any data posted by the board. In jupyter lab, we use a command like <em>ble.connect()</em> to establish a connection with an Artemis board with the MAC address specified in the <em>connections.yml</em> file, and use several <em>ble commands</em> to receive different kinds of data (i.e. strings, integers, floats, etc) from the Artemis board. 
@@ -205,6 +205,9 @@ The computer communicates with the Artemis board via Bluetooth® LE, which is op
 On the Python side, the <em>demo.ipynb</em> file houses our Python code for interacting with the Artemis board. It includes code for establishing and terminating connections with the Artemis, as well as handling data transmission and reception, among other functionalities. Within our project, we also maintain the <em>cmd_types.py</em> file. This file is where we add mappings for new commands that facilitate communication, enable changes, or trigger actions on the Artemis side. And, <em>ble.py</em> and <em>base_ble.py<em> contains several ble commands like <em>connect()</em>, <em>disconnect()</em>, <em>start_notify()</em>, and <em>receive_string()</em> among other useful commands.  
 
 On the Artemis side, we have the <em>ble_arduino.ino</em> file which contains all the code that is compiled and run on the Artemis board. The other files primarily contain class definitions for functionalities such as data transmission and reception, as well as manipulation of character arrays.
+
+### Discussion
+Working on this lab has been both enjoyable and enlightening. While navigating the code base posed initial challenges in understanding the functionality of each segment, referring to the lab instructions effectively addressed many of the encountered issues (i.e. the serial monitor displaying gibberish because of a low baud rate). Diligent reading of the lab manual proved invaluable. As much of the lab's content was novel to me, it served as a rich source of learning experiences. I found exploring BLE and the data exchange between the computer and the Artemis board particularly engaging. 
 
 
 
