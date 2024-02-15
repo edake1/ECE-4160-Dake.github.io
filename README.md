@@ -159,11 +159,12 @@ case GET_CURRENT_TIME:
           }
 ```
 
-In order to find the data transfer rate, I stored the timestamps received in a Python list, and calculated the total number of strings received as well as the total number of bytes. Using the first and last timestamps in the list, I was able to calculate the time elapsed. With the time elapsed and number of strings sent to the conputer, I calculated the data transfer rate. Here, all the time stamps have 6 digits, so I made each string 6 bytes (and calculated the total bytes).
+In order to find the data transfer rate, I stored the timestamps received in a Python list, and calculated the total number of strings received as well as the total number of bytes Using the first and last timestamps in the list, I was able to calculate the time elapsed. With the time elapsed and number of strings sent to the conputer, I calculated the data transfer rate. I calculated the total number of bytes by assuming each string has the ble transfer size limitation of 150 bytes. 
 
 ##### Effective data transfer rate 
 <img width="564" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/34feddf9-3d1a-433b-a780-ac3943ffdb97">
 
+<img width="704" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1f0600b9-3ead-4fa3-be0c-43ae30b8277f">
 
 ### STORE TIMESTAMPS 
 In the "GET_CURRENT_TIME" command, each timestamp was sent individually from Artemis to the computer over a certain time period. For this task, instead of sending each string one by one, I stored all the timestamps in an array and implemented the "SEND_TIME_DATA" command to loop through this array and send each string to the computer to be processed by the notification handler. 
@@ -187,7 +188,6 @@ def notification_handler_2(uuid, byte_array_data):
       temps.append(temp_val)
 ```
 #### Data transfer rate 
-<img width="657" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/c1f647c8-0421-4191-aaf3-1232bead6467">
 <img width="778" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/62411ae8-c376-4671-85ba-175955ebae3c">
 
 ### Differences between the two methods of sending the time and temperature data 
