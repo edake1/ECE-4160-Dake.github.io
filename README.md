@@ -194,8 +194,10 @@ The computer communicates with the Artemis board via Bluetooth® LE, which is op
 
 <img width="422" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/a981287f-a2e8-4b0d-832c-f26fa815358e">
 
+### Codebase 
+On the Python side, the <em>demo.ipynb</em> file houses our Python code for interacting with the Artemis board. It includes code for establishing and terminating connections with the Artemis, as well as handling data transmission and reception, among other functionalities. Within our project, we also maintain the <em>cmd_types.py</em> file. This file is where we add mappings for new commands that facilitate communication, enable changes, or trigger actions on the Artemis side. And, <em>ble.py</em> and <em>base_ble.py<em> contains several ble commands like <em>connect()</em>, <em>disconnect()</em>, <em>start_notify()</em>, and <em>receive_string()</em> among other useful commands.  
 
-
+On the Artemis side, we have the <em>ble_arduino.ino</em> file which contains all the code that is compiled and run on the Artemis board. The other files primarily contain class definitions for functionalities such as data transmission and reception, as well as manipulation of character arrays.
 
 
 
