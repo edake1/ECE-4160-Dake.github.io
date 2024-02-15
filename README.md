@@ -57,10 +57,10 @@ To test the sensor, I decided to press my index finger on the chip to transfer h
 #### Test 2 - Blowing hot air on chip
 In an attempt to observe an appreciable change in the temperature, I proceeded to blow hot air onto the board instead. After a few seconds of doing this, I observed a slight change in the readings. See below for before and after pics. 
 
-#### Before blowing on chip  
+##### Before blowing on chip  
 <img src="docs/images/temp1.png" width="500">
 
-#### When blowing on chip  
+##### When blowing on chip  
 <img src="docs/images/temp2-inc.png" width="500">
 
 From the pics above, you would observe that the temperature readings changed from "32- - -" to "33- - -" after hot air was blown onto the board. 
@@ -109,7 +109,7 @@ tx_characteristic_string.writeValue(tx_estring_value.c_str());
 Serial.println(tx_estring_value.c_str());
 ```
 
-<img src="docs/images/hello-there.png" width="500">  
+<img src="docs/images/hey-there.png" width="500">  
 
 <img src="docs/images/serial-monitor-hello.png" width="500">  
 
