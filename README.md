@@ -24,7 +24,7 @@ The "Blink" code toggles the board's built-in LED pin between 'HIGH' and 'LOW' s
 To execute the "Blink" project, I first verified the code to ensure proper compilation and then uploaded it onto the Artemis board. Upon completion of the upload process, the blue LED begins blinking as intended.
 
 VIDEO 
-[Imgur](https://imgur.com/SngHCKx)  
+[Blink](https://imgur.com/SngHCKx)  
 
 #### Sample Code in Void loop
 
