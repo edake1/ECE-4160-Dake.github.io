@@ -162,11 +162,8 @@ case GET_CURRENT_TIME:
 In order to find the data transfer rate, I stored the timestamps received in a Python list, and calculated the total number of strings received as well as the total number of bytes Using the first and last timestamps in the list, I was able to calculate the time elapsed. With the time elapsed and number of strings sent to the conputer, I calculated the data transfer rate. I calculated the total number of bytes by assuming each string has the ble transfer size limitation of 150 bytes. 
 
 ##### Effective data transfer rate  
-<img width="720" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/9bd7a2ec-16ef-48ff-868a-a99e11dba10d">
+<img width="720" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/9bd7a2ec-16ef-48ff-868a-a99e11dba10d">  
 
-<img width="564" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/34feddf9-3d1a-433b-a780-ac3943ffdb97">
-
-<img width="704" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1f0600b9-3ead-4fa3-be0c-43ae30b8277f">
 
 ### STORE TIMESTAMPS 
 In the "GET_CURRENT_TIME" command, each timestamp was sent individually from Artemis to the computer over a certain time period. For this task, instead of sending each string one by one, I stored all the timestamps in an array and implemented the "SEND_TIME_DATA" command to loop through this array and send each string to the computer to be processed by the notification handler. 
