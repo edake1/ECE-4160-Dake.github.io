@@ -86,7 +86,12 @@ I already had a python installation so I just re-verified that it was at least v
 Here, I used <em>pip</em> to install <em>venv</em> for Python by running ```python3 -m pip install --user virtualenv```. I then navigated to my project directory and created a virtual environment. 
 After the virtual environment was created, I activated it and proceeded to install the relevant python packages for the environment by running ```pip install numpy pyyaml colorama nest_asyncio bleak jupyterlab``` 
 
-With the package installatio done, I followed the lab instructions for unzipping the codebase into my project directory and got jupyter lab running. 
+With the package installation done, I followed the lab instructions for unzipping the codebase into my project directory and got jupyter lab running. 
+
+#### Updating Artemis MAC Address 
+After burning my ble_arduino.ino sketch into the Artemis board, the board printed its MAC address in the serial monitor. And, during configuration, I replaced the Artemis address in the "connections.yml" file with this same MAC address. 
+
+<img src="docs/images/publish-mac-address.png" width="500">
 
 To test the robot's sensors more effectively, I carried out the following tasks. 
 
@@ -154,20 +159,24 @@ case GET_CURRENT_TIME:
           }
 ```
 
-In order to find the data transfer rate, I stored the timestamps received in a Python list, and calculated the total number of strings received as well as the total number of bytes. Using the first and last timestamps in the list, I was able to calculate the time elapsed. With the time elapsed and number of strings sent to the conputer, I calculated the data transfer rate. 
+In order to find the data transfer rate, I stored the timestamps received in a Python list, and calculated the total number of strings received as well as the total number of bytes. Using the first and last timestamps in the list, I was able to calculate the time elapsed. With the time elapsed and number of strings sent to the conputer, I calculated the data transfer rate. Here, all the time stamps have 6 digits, so I made each string 6 bytes (and calculated the total bytes).
+
+##### Effective data transfer rate 
+<img width="564" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/34feddf9-3d1a-433b-a780-ac3943ffdb97">
 
 
 ### STORE TIMESTAMPS 
 In the "GET_CURRENT_TIME" command, each timestamp was sent individually from Artemis to the computer over a certain time period. For this task, instead of sending each string one by one, I stored all the timestamps in an array and implemented the "SEND_TIME_DATA" command to loop through this array and send each string to the computer to be processed by the notification handler. 
 
 #### Implementation 
-First, I implemented a <em>"STORE_TIME"</em> command that populates an array of fixed size in the global scope. Then, I implemented the <em>"SEND_TIME_DATA"</em> command to loop through this array and send the string data to the computer. I used an array size of 1500 for my implementation. On the Python size (in jupyter lab), I was able to collate all the string data received and verify that all the data has been received. 
+First, I implemented a <em>"STORE_TIME"</em> command that populates an array of fixed size in the global scope with the time stamps. Then, I implemented the <em>"SEND_TIME_DATA"</em> command to loop through this array and send the string data to the computer. I used an array size of 1500 for my implementation. On the Python size (in jupyter lab), I was able to collate all the string data received and verify that all the data has been received. 
 
 
 ### GET TEMPERATURE READINGS 
 This task is similar to the storing time stamps task, so the implementation is alike. Here, I instantiated an array of the same size as that for collating timestamps, then in my "STORE_TIME" command, I also collated the current temperature and stored it in my temperature array which is defined in the global scope just like the time array. 
-Then, in my "SEND_TIME_DATA" command, I created an EString of the form <em>"<time stamp>-<temperature>"</em>, and transmitted it to the computer. To extract the time and temperature and store it in different arrays, I implemented a new notification handler to parse strings with the new format specified above. The handler simply splits the string received at the "-" symbol and stores the extracted time and temperature in a time and temperature array defined in the global scope. My notification handler uses a helper function (extract_temp_time()) that extracts the time and temperature data. See code snippet below. 
+Then, in my "GET_TEMP_READINGS" command, I created an EString of the form <em>"<time stamp>-<temperature>"</em> by looping through the temperature and time arrays, and transmitted it to the computer. To extract the time and temperature and store it in different arrays, I implemented a new notification handler to parse strings with the new format specified above. My notification handler uses a helper function (extract_temp_time()) that extracts the time and temperature data. See code snippet below. 
 
+#### Notification handler  
 ```
 def notification_handler_2(uuid, byte_array_data):
   string_value = ble.bytearray_to_string(byte_array_data)
@@ -177,11 +186,13 @@ def notification_handler_2(uuid, byte_array_data):
       times.append(time_val)
       temps.append(temp_val)
 ```
+#### Data transfer rate 
+<img width="657" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/c1f647c8-0421-4191-aaf3-1232bead6467">
 
+### Communication between computer and Artemis 
+The computer communicates with the Artemis board via Bluetooth® LE, which is optimized for low power usage, making it ideal for the Artemis. The Artemis contains an onboard BLE module enabling it to connect with BLE-enabled computers. It advertises its presence through advertising packets, allowing the computer to establish a connection. Once connected, the computer communicates exclusively with the Artemis board using its MAC address. The Artemis acts as a bulletin board, updating and transmitting information, while the computer, acting as the central device, reads any data posted by the board. In jupyter lab, we use a command like <em>ble.connect()</em> to establish a connection with an Artemis board with the MAC address specified in the <em>connections.yml</em> file, and use several <em>ble commands</em> to receive different kinds of data (i.e. strings, integers, floats, etc) from the Artemis board. 
 
-
-
-
+<img width="422" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/a981287f-a2e8-4b0d-832c-f26fa815358e">
 
 
 
