@@ -37,9 +37,9 @@ float roll = atan2(a_y, a_z) * 180.0 / M_PI;
 ...
 ```
 Using the edge of the lab table as reference, orienting the sensor to get 90 degrees pitch and roll resulted in the output below:  
-<img width="811" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/b18b5a0d-d5e2-4df9-878c-b83e2a2aea04">  
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/b18b5a0d-d5e2-4df9-878c-b83e2a2aea04">  
 
-<img width="532" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/13693d13-a2f3-4da1-b3d2-9041f1080a14">  
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/13693d13-a2f3-4da1-b3d2-9041f1080a14">  
 
 
 
