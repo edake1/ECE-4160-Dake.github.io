@@ -1,5 +1,5 @@
 
-# LAB 2: TIME OF FLIGHT SENSORS
+# LAB 2: IMU
 
 The purpose of this lab is to equip the robot the Inertial Measurement Unit (IMU) sensor which provides data on the movement, orientation, and position of the robot. 
 
