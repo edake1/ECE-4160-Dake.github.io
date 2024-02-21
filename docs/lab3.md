@@ -16,7 +16,8 @@ The time of flight sensors used for this lab are two VL53L1X sensors and wiring 
 For hooking up multiple sensors, the QWIIC breakout board came in handly. The breakout board was first powerered via a QWIIC cable thus providing three extra connection points for other sensors. I connected both Time of Flight (TOF) sensors to the Artemis via two QWIIC connection terminals on the breakout board.  
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1c766f0b-6f3c-47b5-89fe-8595f95340d8">  
 
-In the picture above, you can see the two time of flight sensors connected via the breakout board. 
+In the picture above, you can see the two time of flight sensors connected via the breakout board. See below for picture of sensors working in parallel.
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ee059b13-2c8d-44b6-b8d0-fab3e606a5a1">  
 
 ### I2C Sensor Address 
 When the first Time of Tlight sensor was connected to the board, its address was printed in the serial monitor after it was detected during scanning. Per the sensor manual, the address of the sensor is supposed to be <em>0X52</em> but the address displayed was <em>0X29</em>. There was no cause for alarm at this point as <em>0X29</em> was simply the default address of <em>0X52</em> bitshifted to the right. 
