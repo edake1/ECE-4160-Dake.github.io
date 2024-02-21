@@ -34,5 +34,13 @@ distanceSensor2.setI2CAddress(SENSOR2_ADDRESS);
 ...
 ```
 
+### Sensor placement 
+In order to ensure the robot is able to accurately detect obstacles in its environment, sensor placement is important. I decided to hook up one sensor to the front of my car and hook up the other to the back of the car. This design decision was to make sure the robot can detect obstacles with reference to its rear and front positions. Another option could have been to hook up both to the front but in that case the only obstacle detection reference will be the front where two sensors are working together to provide accurate data. 
+
+### Time of Flight Sensor Modes 
+The TOF sensor has some flexibility in the mode for taking measurements based on the range needed. You can either set the distance ranging mode to short or long via the <em>setDistanceModeShort()</em> and <em>setDistanceModeLong() methods. I decided to go with the short distance mode because I figured if the robot is going to be performing stunts, I want it to be maximally sensitive and accurate. The long distance mode sacrifices sensitivity to ambient noise for greater range so the short distance mode was a better option in this case. 
+
+
+
 
 
