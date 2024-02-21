@@ -212,8 +212,8 @@ On the Artemis side, we have the <em>ble_arduino.ino</em> file which contains al
 Working on this lab has been both enjoyable and enlightening. While navigating the code base posed initial challenges in understanding the functionality of each segment, referring to the lab instructions effectively addressed many of the encountered issues (i.e. the serial monitor displaying gibberish because of a low baud rate). Diligent reading of the lab manual proved invaluable. As much of the lab's content was novel to me, it served as a rich source of learning experiences. I found exploring BLE and the data exchange between the computer and the Artemis board particularly engaging. 
 
 ### Other Labs  
-[LAB 2](docs/lab2.md)  
-[LAB 3](docs/lab3.md)  
+* [LAB 2](docs/lab2.md)  
+* [LAB 3](docs/lab3.md)  
 
 
 
