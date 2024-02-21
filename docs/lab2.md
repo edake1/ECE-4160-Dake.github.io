@@ -15,8 +15,8 @@ Connecting the IMU sensor to the Artemis board was straightforward as it involve
 <img width="800" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/49150357-e8a7-4e1f-848f-5e17649595ad">
 
 ### AD0_VAL
-In the default example file, the AD0_VAL value was set to 1 but when the code was run with this value, we get a <em>data underflow</em>. I quickly changed the AD0_VAL to 1 and it ressolved the issue. The AD0_VAL is concerned with configuring the state of the AD0 pin (pin used to set the address of the sensor) of the sensor. Changing the AD0_VAL to 1 set the pin high in this case. 
-<img width="300" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1c16fea4-c12d-4c58-8d62-4bf82b2d5493">
+In the default example file, the AD0_VAL value was set to 1 but when the code was run with this value, we get a <em>data underflow</em>. I quickly changed the AD0_VAL to 1 and it ressolved the issue. The AD0_VAL is concerned with configuring the state of the AD0 pin (pin used to set the address of the sensor) of the sensor. Changing the AD0_VAL to 1 set the pin high in this case.  
+<img width="300" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1c16fea4-c12d-4c58-8d62-4bf82b2d5493">  
 
 ### Testing the IMU
 I tested the IMU by turning it in different directions and slowly accelerating it. From this test, we observe that when the IMU is positioned exactly in any of the three axes, the accelerometer reading for that axis has a greater magnitude (~1000 mg) compared to the others. When the sensor is positioned in any other orientation, the values recorded on the axes is adjusted accordingly with axis recording a greater value indicating that the force of gravity is stronger in that direction. 
