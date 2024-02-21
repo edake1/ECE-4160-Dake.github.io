@@ -11,7 +11,7 @@ This purpose of this lab is to equip the robot with time of flight sensors to en
 
 ## The Time of Flight Sensors 
 The time of flight sensors used for this lab are two VL53L1X sensors and wiring them was fairly straightforward as we just needed to refer to the specifications sheet and connect the right wires on the QWIIC connectors to the right pins on the sensors. The pins on the sensors were labeled so this task involved connecting Vin, GND, SDA, SCL, and XSHUT pins to the designated pins.
-<img width="300" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ad161126-73be-4390-8f8b-8bff401434f5"> <img width="300" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/db199fcf-bf28-4d1d-8d0c-c9901595d1d4">
+<img width="300" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ad161126-73be-4390-8f8b-8bff401434f5"> <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/db199fcf-bf28-4d1d-8d0c-c9901595d1d4">
 
 For hooking up multiple sensors, the QWIIC breakout board came in handly. The breakout board was first powerered via a QWIIC cable thus providing three extra connection points for other sensors. I connected both Time of Flight (TOF) sensors to the Artemis via two QWIIC connection terminals on the breakout board.  
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1c766f0b-6f3c-47b5-89fe-8595f95340d8">  
