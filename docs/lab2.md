@@ -25,7 +25,7 @@ The gyroscope also recorded data on the orientation of the sensor such that when
 
 
 ## Accelerometer  
-I extracted the data recorded by the accelerometer and converted it to pitch and roll. 
+I extracted the data recorded by the accelerometer and using the code below, I converted it to pitch and roll.
 ```
 ...
 float a_x = myICM.accX(); 
@@ -36,5 +36,8 @@ float pitch = atan2(a_x, a_z) * 180.0 / M_PI;
 float roll = atan2(a_y, a_z) * 180.0 / M_PI;
 ...
 ```
-<img width="811" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/b18b5a0d-d5e2-4df9-878c-b83e2a2aea04">
+Using the edge of the lab table as reference, orienting the sensor to get 90 degrees pitch and roll resulted in the output below:  
+<img width="811" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/b18b5a0d-d5e2-4df9-878c-b83e2a2aea04">  
+
+
 
