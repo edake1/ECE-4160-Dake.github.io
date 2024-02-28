@@ -40,7 +40,7 @@ Using the edge of the lab table as reference, orienting the sensor to get 90 deg
 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/b18b5a0d-d5e2-4df9-878c-b83e2a2aea04">  
 
-### Original Pitch and Roll with no externally induced vibrational noise  
+#### Original Pitch and Roll with no externally induced vibrational noise  
 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/e1133bad-877b-4bca-b255-2c949bd6ce7b">
 
