@@ -65,9 +65,9 @@ With little perturbations in the system, the accelerometer and gyroscope data al
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/d2839225-6771-4cff-a3cc-a97731f94fcc">
 
 #### Inducing vibrational noise into the system  
-On inducing vibrational noise into the system by tapping the table, I collated accelerometer data and plot the fourier transform of the roll and pitch. Even with the induced vibrational noise in the system, the fourier spectrum shows almost no sharp peaks except for the slight peak at about 0.8Hz (see image below). An internal filter would explain why even with the externally induced noise the frequency spectrum does not show much high frequency noise in the system.  
+On inducing vibrational noise into the system by tapping the table, I collated accelerometer data and plot the fourier transform of the roll and pitch. Even with the induced vibrational noise in the system, the fourier spectrum shows almost no sharp peaks except for the slight peak at about 3.5Hz and 4.8Hz (see image below). An internal filter would explain why even with the externally induced noise the frequency spectrum does not show much high frequency noise in the system.  
 
-<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/4d33fded-d344-4fda-9484-197b142e3176">  
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/30ba5d21-53dd-4732-9d53-4eb8bba282a4">  
 
 On the specifications sheet of the IMU, we see the line "On-Chip 16-bit ADCs and Programmable Filters" under the features section which supports our observation. The good resolution offered by the 16-bit ADC coupled with the presence of the programmable filter would explain our observation above. Due to the in-built noise rejection ability of the IMU, an extra noise filter may not be necessary but I implemented one and the results were noticeable which was a little unexpected given the fact that the chip had already filtered some of the noise. I used a moderate alpha value of 0.4 for my low pass filter.  
 
