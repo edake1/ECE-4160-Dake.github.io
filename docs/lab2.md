@@ -71,7 +71,7 @@ On inducing vibrational noise into the system by tapping the table, I collated a
 
 On the specifications sheet of the IMU, we see the line "On-Chip 16-bit ADCs and Programmable Filters" under the features section which supports our observation. The good resolution offered by the 16-bit ADC coupled with the presence of the programmable filter would explain our observation above. Due to the in-built noise rejection ability of the IMU, an extra noise filter may not be necessary but I implemented one and the results were noticeable which was a little unexpected given the fact that the chip had already filtered some of the noise. I used a moderate alpha value of 0.4 for my low pass filter.  
 
-<img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1bf8d7e5-62ac-4447-9b93-edf2f06681aa">  
+<img width="1319" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/432f4483-c712-4981-9949-e35a3afa4f34">  
 
 ## Gyroscope 
 
