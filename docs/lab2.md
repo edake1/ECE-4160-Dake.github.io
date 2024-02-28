@@ -41,6 +41,14 @@ Using the edge of the lab table as reference, orienting the sensor to get 90 deg
 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/13693d13-a2f3-4da1-b3d2-9041f1080a14">  
 
+### Noise in accelerometer frequency spectrum 
+Even without inducing some vibrational noise into the system, after passing the accelerometer data through the complimentary low pass filter, you can observe that the low pass filtered plot (see image below) appears smoother than the original roll and pitch data. This goes to show that some noise was caught by the filter. 
+<img width="1291" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/4f18c674-753b-446f-88f9-a86a7b1052eb">  
+
+Due to the little noise in the system, as expected, the fourier spectrum of the accelerometer roll and pitch data does not show any unusually sharp peaks or high frequency noise in the system.  
+<img width="761" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/f62e9759-714b-42f9-ac90-fbbd3b754345">  
+
+
 
 
 
