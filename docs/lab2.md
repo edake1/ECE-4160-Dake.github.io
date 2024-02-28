@@ -73,7 +73,20 @@ On the specifications sheet of the IMU, we see the line "On-Chip 16-bit ADCs and
 
 <img width="1319" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/432f4483-c712-4981-9949-e35a3afa4f34">  
 
-## Gyroscope 
+## Gyroscope  
+Using the code below, I computed the gyroscope pitch and roll. 
+```
+  ...
+  gyr_pitch[imu_index] = gyr_pitch[imu_index - 1] + myICM.gyrY() * dt; 
+  gyr_roll[imu_index] = gyr_roll[imu_index - 1] + myICM.gyrX() * dt; 
+  gyr_yaw[imu_index] = gyr_yaw[imu_index - 1] + myICM.gyrZ() * dt;
+  ...
+```
+Even with externally induced noise, the gyroscope data seemed fairly stable and the fourier spectrum plot is very similar to that of the accelerometer pitch and roll. 
+The fourier transform of the complimentary filtered gyroscope pitch and roll 
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/74d06f9f-5d1d-4912-8e18-2d62738a7b43">
+<img width="644" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/147cfffe-2dd5-4548-9ffc-25b03bff09f1">
+
 
 
 ## STUNT 
