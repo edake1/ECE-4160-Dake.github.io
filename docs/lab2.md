@@ -64,6 +64,8 @@ On the specifications sheet of the IMU, we see the line "On-Chip 16-bit ADCs and
 
 <img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1bf8d7e5-62ac-4447-9b93-edf2f06681aa">  
 
+## Gyroscope 
+
 
 ## STUNT 
 I took my RC car for a test-drive and the overall performance was great. The car was very responsive and quick in carrying out instructions. With the right key combination, it is able to do flips, make quick turns, and spin repeatedly. See below for car stunt. 
