@@ -84,7 +84,7 @@ Using the code below, I computed the gyroscope pitch and roll.
 ```
 Even with externally induced noise, the gyroscope data seemed fairly stable and the fourier spectrum plot is very similar to that of the accelerometer pitch and roll.  
 
-<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/147cfffe-2dd5-4548-9ffc-25b03bff09f1">  <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/74d06f9f-5d1d-4912-8e18-2d62738a7b43">  
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/147cfffe-2dd5-4548-9ffc-25b03bff09f1">  <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/74d06f9f-5d1d-4912-8e18-2d62738a7b43">  
 
 ## STUNT 
 I took my RC car for a test-drive and the overall performance was great. The car was very responsive and quick in carrying out instructions. With the right key combination, it is able to do flips, make quick turns, and spin repeatedly. See below for car stunt. 
