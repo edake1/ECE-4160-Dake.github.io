@@ -51,6 +51,11 @@ Even without inducing some vibrational noise into the system, after passing the 
 Due to the little noise in the system, as expected, the fourier spectrum of the accelerometer roll and pitch data does not show any unusually sharp peaks or high frequency noise in the system.  
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/f62e9759-714b-42f9-ac90-fbbd3b754345">  
 
+With little perturbations in the system, the accelerometer and gyroscope data also show oscillations about a mean value with no unusually sharp peaks.  
+
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/cce2a9d8-0d81-4acd-9141-b2dc5adf4806">
+
+
 
 
 
