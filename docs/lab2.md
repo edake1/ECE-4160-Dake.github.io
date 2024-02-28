@@ -42,15 +42,23 @@ Using the edge of the lab table as reference, orienting the sensor to get 90 deg
 
 
 ### Noise in accelerometer frequency spectrum 
-With the IMU laid still on the table with no externally induced vibrations, readings for the accelerometer pitch and roll were taken and the results are shown in the image below. 
+With the IMU laid still on the table with no externally induced vibrations, readings for the accelerometer pitch and roll were taken and the results are shown in the image below. Since there was no externally induced high frequency noise, we do not expect the frequency spectrum to show unusually sharp peaks at various frequencies, and this is corroborated by the fourier transform plot of the accelerometer roll and pitch data in the right image (see below). 
 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/7e4af40f-6fa5-44e6-9856-76021784f9d2"> <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/bd5c60ea-7b5f-4aea-b039-b3f691093e53">
 
-Even without inducing some vibrational noise into the system, after passing the accelerometer data through the complimentary low pass filter, you can observe that the low pass filtered plot (see image below) appears smoother than the original roll and pitch data. This goes to show that some noise was caught by the filter. 
-<img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/4f18c674-753b-446f-88f9-a86a7b1052eb">  
+### Low Pass Filter  
+Using the code below, a low pass filter was implemented for the accelerometer. 
+```
+  ...
+  acc_pitch_lpf[imu_index] = alpha * acc_pitch[imu_index] + (1 - alpha) * acc_pitch_lpf[imu_index - 1]; 
+  acc_pitch_lpf[imu_index - 1] = acc_pitch_lpf[imu_index]; 
+  acc_roll_lpf[imu_index] = alpha * acc_roll[imu_index] + (1 - alpha) * acc_roll_lpf[imu_index - 1]; 
+  acc_roll_lpf[imu_index - 1] = acc_roll_lpf[imu_index];
+  ...
+```
+Even without inducing some vibrational noise into the system, after passing the accelerometer data through the complimentary low pass filter, you can observe that the low pass filtered plot (see image below) appears smoother than the original roll and pitch data. This goes to show that some noise was caught by the filter.   
 
-Due to the little noise in the system, as expected, the fourier spectrum of the accelerometer roll and pitch data does not show any unusually sharp peaks or high frequency noise in the system.  
-<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/f62e9759-714b-42f9-ac90-fbbd3b754345">  
+<img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/d7caa199-ceb1-48e3-acb0-8c3841451e00">
 
 With little perturbations in the system, the accelerometer and gyroscope data also show oscillations about a mean value with no unusually sharp peaks.  
 
