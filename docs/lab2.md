@@ -62,7 +62,7 @@ Even without inducing some vibrational noise into the system, after passing the 
 
 With little perturbations in the system, the accelerometer and gyroscope data also show oscillations about a mean value with no unusually sharp peaks.  
 
-<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/cce2a9d8-0d81-4acd-9141-b2dc5adf4806">
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/d2839225-6771-4cff-a3cc-a97731f94fcc">
 
 #### Inducing vibrational noise into the system  
 On inducing vibrational noise into the system by tapping the table, I collated accelerometer data and plot the fourier transform of the roll and pitch. Even with the induced vibrational noise in the system, the fourier spectrum shows almost no sharp peaks except for the slight peak at about 0.8Hz (see image below). An internal filter would explain why even with the externally induced noise the frequency spectrum does not show much high frequency noise in the system.  
