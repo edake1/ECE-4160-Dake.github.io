@@ -37,9 +37,12 @@ float roll = atan2(a_y, a_z) * 180.0 / M_PI;
 ...
 ```
 Using the edge of the lab table as reference, orienting the sensor to get 90 degrees pitch and roll resulted in the output below:  
+
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/b18b5a0d-d5e2-4df9-878c-b83e2a2aea04">  
 
-<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/13693d13-a2f3-4da1-b3d2-9041f1080a14">  
+### Original Pitch and Roll with no externally induced vibrational noise  
+
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/e1133bad-877b-4bca-b255-2c949bd6ce7b">
 
 ### Noise in accelerometer frequency spectrum 
 Even without inducing some vibrational noise into the system, after passing the accelerometer data through the complimentary low pass filter, you can observe that the low pass filtered plot (see image below) appears smoother than the original roll and pitch data. This goes to show that some noise was caught by the filter. 
