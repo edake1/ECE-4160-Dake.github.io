@@ -64,7 +64,8 @@ On the specifications sheet of the IMU, we see the line "On-Chip 16-bit ADCs and
 
 <img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1bf8d7e5-62ac-4447-9b93-edf2f06681aa">  
 
-
+## STUNT 
+https://www.youtube.com/shorts/sbtbLbjgg3Y
 
 
 
