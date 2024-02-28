@@ -40,11 +40,12 @@ Using the edge of the lab table as reference, orienting the sensor to get 90 deg
 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/b18b5a0d-d5e2-4df9-878c-b83e2a2aea04">  
 
-#### Original Pitch and Roll with no externally induced vibrational noise  
-
-<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/e1133bad-877b-4bca-b255-2c949bd6ce7b">
 
 ### Noise in accelerometer frequency spectrum 
+With the IMU laid still on the table with no externally induced vibrations, readings for the accelerometer pitch and roll were taken and the results are shown in the image below. 
+
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/7e4af40f-6fa5-44e6-9856-76021784f9d2">  <img width="692" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/bd5c60ea-7b5f-4aea-b039-b3f691093e53">
+
 Even without inducing some vibrational noise into the system, after passing the accelerometer data through the complimentary low pass filter, you can observe that the low pass filtered plot (see image below) appears smoother than the original roll and pitch data. This goes to show that some noise was caught by the filter. 
 <img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/4f18c674-753b-446f-88f9-a86a7b1052eb">  
 
