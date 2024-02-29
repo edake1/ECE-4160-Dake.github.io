@@ -86,6 +86,14 @@ Even with externally induced noise, the gyroscope data seemed fairly stable and 
 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/147cfffe-2dd5-4548-9ffc-25b03bff09f1">  <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/74d06f9f-5d1d-4912-8e18-2d62738a7b43">  
 
+## Data storage and transfer protocol
+To manage data collection and transmission over Bluetooth Low Energy (BLE) in my project, I first implemented flags in the code that signal when to collect data. The collected data is temporarily stored in an array, and a separate command triggers its transfer over BLE to my computer. This method of storing before transmitting was chosen to avoid potential latency that could occur if data were sent immediately upon collection, which might slow down the robot's movement and responsiveness to commands.
+
+Additionally, I decided to send different types of data in separate batches, rather than using one large array for everything. For example, gyroscope data, complete with timestamps, are stored and transmitted in a distinct array from accelerometer data. This approach is tailored to the BLE's data transfer limit of about 150 characters.
+
+And, for transmission efficiency, data is sent over BLE as strings, rather than in their original data types (such as int or float). This strategy is more memory-efficient and helps maintain the system’s performance within the constraints of BLE communication.
+
+
 ## STUNT 
 I took my RC car for a test-drive and the overall performance was great. The car was very responsive and quick in carrying out instructions. With the right key combination, it is able to do flips, make quick turns, and spin repeatedly. See below for car stunt. 
 
