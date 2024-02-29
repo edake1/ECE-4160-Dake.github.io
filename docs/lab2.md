@@ -99,7 +99,7 @@ And, for transmission efficiency, data is sent over BLE as strings, rather than 
 
 
 ## STUNT 
-I took my RC car for a test-drive and the overall performance was great. The car was very responsive and quick in carrying out instructions. With the right key combination, it is able to do flips, make quick turns, and spin repeatedly. See below for car stunt. 
+I tested my RC car and was pleased with its performance. It responded swiftly and precisely to commands, easily executing flips, quick turns, and spins with the appropriate key combinations. Below are the details of the car's stunts.
 
 [Car Stunt](https://www.youtube.com/shorts/sbtbLbjgg3Y)  
 
