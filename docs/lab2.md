@@ -86,7 +86,11 @@ Even with externally induced noise, the gyroscope data seemed fairly stable and 
 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/147cfffe-2dd5-4548-9ffc-25b03bff09f1">  <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/74d06f9f-5d1d-4912-8e18-2d62738a7b43">  
 
-## Data storage and transfer protocol
+## Data Sampling 
+### Speed of main loop 
+In the main loop, I focused on using if-expressions to determine whether to execute tasks, such as data collection, to avoid additional loops. This approach significantly enhanced the main loop's speed/efficiency and increased the data sampling rate from the IMU, especially when avoiding other loops and serial print statements.
+
+### Data storage and transfer protocol
 To manage data collection and transmission over Bluetooth Low Energy (BLE) in my project, I first implemented flags in the code that signal when to collect data. The collected data is temporarily stored in an array, and a separate command triggers its transfer over BLE to my computer. This method of storing before transmitting was chosen to avoid potential latency that could occur if data were sent immediately upon collection, which might slow down the robot's movement and responsiveness to commands.
 
 Additionally, I decided to send different types of data in separate batches, rather than using one large array for everything. For example, gyroscope data, complete with timestamps, are stored and transmitted in a distinct array from accelerometer data. This approach is tailored to the BLE's data transfer limit of about 150 characters.
