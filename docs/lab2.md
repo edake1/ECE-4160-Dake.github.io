@@ -74,7 +74,7 @@ On the specifications sheet of the IMU, we see the line "On-Chip 16-bit ADCs and
 <img width="1319" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/432f4483-c712-4981-9949-e35a3afa4f34">  
 
 ## Gyroscope  
-Using the code below, I computed the gyroscope pitch and roll. 
+Referencing the gyroscope equations from lectures and using the code below, I computed the gyroscope pitch and roll. 
 ```
   ...
   gyr_pitch[imu_index] = gyr_pitch[imu_index - 1] + myICM.gyrY() * dt; 
