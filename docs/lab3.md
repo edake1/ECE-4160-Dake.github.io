@@ -46,7 +46,7 @@ The implementation involved shutting down one of the TOF sensors, assigning a ne
 To ensure accurate obstacle detection, sensor placement is critical. I positioned one sensor at the front and another at the back of the car. This setup enables the robot to detect obstacles from both its front and rear positions, providing comprehensive situational awareness. Alternatively, installing both sensors at the front would have limited the robot's detection capabilities to only the front, potentially leaving blind spots at the rear.
 
 ### Time of Flight Sensor Modes 
-The TOF sensor has some flexibility in the mode for taking measurements based on the range needed. You can either set the distance ranging mode to short or long via the <em>setDistanceModeShort()</em> and <em>setDistanceModeLong() methods. I decided to go with the short distance mode because I figured if the robot is going to be performing stunts, I want it to be maximally sensitive and accurate. The long distance mode sacrifices sensitivity to ambient noise for greater range so the short distance mode was a better option in this case. 
+The TOF sensor has some flexibility in the mode for taking measurements based on the range needed. You can either set the distance ranging mode to short or long via the <em>setDistanceModeShort()</em> and <em>setDistanceModeLong()</em> methods. I decided to go with the short distance mode because I figured if the robot is going to be performing stunts, I want it to be maximally sensitive and accurate. The long distance mode sacrifices sensitivity to ambient noise for greater range so the short distance mode was a better option in this case. 
 
 ### Short Distance Mode Statistics
 #### Range: 10mm - 1686 mm 
