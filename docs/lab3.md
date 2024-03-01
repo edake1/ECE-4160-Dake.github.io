@@ -26,7 +26,7 @@ The Time of Flight sensors were integrated with the Artemis board following the 
 
 To set up the wiring, we simply linked the VIN, GND, SDA, and SCL pins of the time-of-flight sensor to their corresponding pins on the breakout board, adhering to the QWIIC connector schematic provided. The wires integrated into the QWIIC connectors were color-coded, simplifying the matching process during the setup.
 
-<img width="300" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/829faca1-c425-4d03-a937-9e0e1871edc0">
+<img width="200" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/829faca1-c425-4d03-a937-9e0e1871edc0">
 
 
 ### I2C Sensor Address 
