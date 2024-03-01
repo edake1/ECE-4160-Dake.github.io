@@ -90,7 +90,7 @@ Even with externally induced noise, the gyroscope data seemed fairly stable and 
 ### Speed of main loop 
 In the main loop, I focused on using if-expressions to determine whether to execute tasks, such as data collection, to avoid additional loops. This approach significantly enhanced the main loop's speed/efficiency and increased the data sampling rate from the IMU, especially when avoiding other loops and serial print statements.  
 
-<img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/0e6f3b71-a359-4204-a23e-0f287b4a8058">  
+<img width="1000" alt="sampling-rates" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2ca3b159-1e8c-40d6-86ba-2d31c9676ef7">  
 
 During each iteration of the main loop, I aggregated timestamps corresponding to when the IMU collected data and transmitted them via BLE. Subsequently, I implemented a handler to analyze these timestamps and compute the time differences between each timestamp and its preceding one. This analysis enabled me to estimate the IMU's sampling rate. Notably, the main loop executed approximately once every 0.03 milliseconds, while the IMU sampled values roughly every 18.3 milliseconds.  
 
