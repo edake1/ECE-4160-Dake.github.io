@@ -67,6 +67,20 @@ Here, at every iteration of the main loop, I tranmitted time stamps over BLE whe
 
 From the image above, the TOF sensors were sampling values approximately once every <em>863 milliseconds</em> which is about 29000 times slower than the rate at which the main loop is running. 
 
+The code implementation just consists of an if statement that checks if we have collated 100 time stamps or not and appends the current time to an array.  
+
+```
+  ...
+  tofData1[tof_index] = distance1; 
+  tofData2[tof_index] = distance2; 
+  if (tof_speed_index < 100){
+    tofSpeed[tof_speed_index] = (int) millis(); 
+    tof_speed_index++; 
+  }
+  ...
+```
+
+
 
 
 
