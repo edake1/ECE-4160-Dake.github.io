@@ -22,7 +22,12 @@ In the picture above, you can see the two time of flight sensors connected via t
 ### Schematic  
 The Time of Flight sensors were integrated with the Artemis board following the schematic depicted below. During the wiring process, one of the sensors was outfitted with an XSHUT pin, which proved useful for I2C address assignment. Given the requirement for two time of flight sensors, we had to use the QWIIC breakout board (multiport) to expand the number of available ports, especially considering the need to also connect the IMU to the Artemis board.  
 
-<img src="images/schematic.jpeg" width="800">
+<img src="images/schematic.jpeg" width="800">  
+
+To set up the wiring, we simply linked the VIN, GND, SDA, and SCL pins of the time-of-flight sensor to their corresponding pins on the breakout board, adhering to the QWIIC connector schematic provided. The wires integrated into the QWIIC connectors were color-coded, simplifying the matching process during the setup.
+
+<img width="300" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/829faca1-c425-4d03-a937-9e0e1871edc0">
+
 
 ### I2C Sensor Address 
 When the first Time of Tlight sensor was connected to the board, its address was printed in the serial monitor after it was detected during scanning. Per the sensor manual, the address of the sensor is supposed to be <em>0X52</em> but the address displayed was <em>0X29</em>. There was no cause for alarm at this point as <em>0X29</em> was simply the default address of <em>0X52</em> bitshifted to the right. 
