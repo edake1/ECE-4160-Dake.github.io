@@ -20,7 +20,6 @@ In the picture above, you can see the two time of flight sensors connected via t
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ee059b13-2c8d-44b6-b8d0-fab3e606a5a1">  
 
 ### Schematic  
-<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/059b3994-95c1-40a5-8f70-d3b86f6441c7">  
 
 
 ### I2C Sensor Address 
