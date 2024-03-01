@@ -97,12 +97,6 @@ After successfully configuring the two time-of-flight sensors, I initiated their
 
 
 ### Thoughts
-I enjoyed every bit of the lab but I had to grapple with a persistent bug before I was able to get my time of flight sensors working in my main <em>ble_arduino.ino</em> file. I was getting a 
-
-<img width="699" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/aea173b7-8ecc-47b8-8d65-ae70bd891275">
-
-
-
-
+I thoroughly enjoyed the lab, although I faced a persistent bug while trying to integrate my time-of-flight sensors into my main ble_arduino.ino file. Initially encountering a HardFault Exception, I used debugging print statements and traced the issue to the <em>distanceSensor.startRanging()</em> method. Half of the problem was resolved, but identifying the cause of the method failure proved challenging. Despite the time-of-flight sensor code functioning in the Example1_ReadDistance file, reviewing every line in my .ino file yielded no solutions. Fortunately, Prof. Jaramillo clarified the address assignment process for time-of-flight sensors, prompting me to reorder the TOF setup commands. By ensuring the first TOF sensor was online before altering its address—unlike my previous code, which skipped this check—I successfully resolved the issue. Debugging my sensors constituted a significant aspect of this lab, providing an enriching learning experience as I delved deeper into troubleshooting and problem-solving methodologies.
 
 
