@@ -60,7 +60,7 @@ Here, I took 10 separate measurements at distances of 1500mm and 500mm to ascert
 Using the same data from the repeatability measurements, I averaged the deviations from the measurements and calculated the accuracy to be around 4mm of the expected value.  
 
 
-## Time of Flight Sensor Speed
+### Time of Flight Sensor Speed
 Here, at every iteration of the main loop, I tranmitted time stamps over BLE whenever the TOF sensors are collating data. Using about 100 of these time stamps, I computed the differences between each time stamp and the previous one. With this data, I was able to approximate the rate at which the TOF sensors were sampling values.  
 
 <img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/0d75b66e-61a7-41b2-bcdf-37094d9dac6e">  
