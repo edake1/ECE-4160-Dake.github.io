@@ -25,13 +25,20 @@ When the first Time of Tlight sensor was connected to the board, its address was
 
 The recorded sensor address of <em>0X29</em> identified the Time of Flight sensor on the I2C bus we run into a problem since we are using two TOF sensors. If the two sensors are connected to the board, they will have the same address. This will be problematic as we would not be able to distinguish between them and as such not be able to work with them independently. Of course, the solution to this problem is to find a way to give one of the TOF sensors a different address, so that's what we did. 
 
-The implementation involved shutting down one of the TOF sensors, assigning a new address and turning it back on. The active-low XSHUT pin connected to one of the TOF sensors made this possible as we had to just set it to low to turn off the sensor. 
+The implementation involved shutting down one of the TOF sensors, assigning a new address and turning it back on. The active-low XSHUT pin connected to one of the TOF sensors made this possible as we had to just set it to low to turn off the sensor. See image below for serial output of I2C addresses before and after assignment.  
+
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/e5b05c1c-8ddf-45ff-9ba7-8285989f9680">  
+
 ```
 ...
-pinMode(SHUTDOWN_PIN, OUTPUT); 
-digitalWrite(SHUTDOWN_PIN, LOW);
-Wire.begin();
-distanceSensor2.setI2CAddress(SENSOR2_ADDRESS);
+  pinMode(SHUTDOWN_PIN, OUTPUT); 
+  digitalWrite(SHUTDOWN_PIN, LOW);
+  check_tof_online(distanceSensor1, "1"); 
+  Serial.println("Sensor #1 online!"); 
+  distanceSensor1.setI2CAddress(SENSOR2_ADDRESS);  
+  digitalWrite(SHUTDOWN_PIN, HIGH);
+  check_tof_online(distanceSensor2, "2"); 
+  Serial.println("Sensor #2 online!");
 ...
 ```
 
