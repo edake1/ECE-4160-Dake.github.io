@@ -88,7 +88,12 @@ Even with externally induced noise, the gyroscope data seemed fairly stable and 
 
 ## Data Sampling 
 ### Speed of main loop 
-In the main loop, I focused on using if-expressions to determine whether to execute tasks, such as data collection, to avoid additional loops. This approach significantly enhanced the main loop's speed/efficiency and increased the data sampling rate from the IMU, especially when avoiding other loops and serial print statements.
+In the main loop, I focused on using if-expressions to determine whether to execute tasks, such as data collection, to avoid additional loops. This approach significantly enhanced the main loop's speed/efficiency and increased the data sampling rate from the IMU, especially when avoiding other loops and serial print statements.  
+
+<img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/0e6f3b71-a359-4204-a23e-0f287b4a8058">  
+
+During each iteration of the main loop, I aggregated timestamps corresponding to when the IMU collected data and transmitted them via BLE. Subsequently, I implemented a handler to analyze these timestamps and compute the time differences between each timestamp and its preceding one. This analysis enabled me to estimate the IMU's sampling rate. Notably, the main loop executed approximately once every 0.03 milliseconds, while the IMU sampled values roughly every 18.3 milliseconds.  
+
 
 ### Data storage and transfer protocol
 To manage data collection and transmission over Bluetooth Low Energy (BLE) in my project, I first implemented flags in the code that signal when to collect data. The collected data is temporarily stored in an array, and a separate command triggers its transfer over BLE to my computer. This method of storing before transmitting was chosen to avoid potential latency that could occur if data were sent immediately upon collection, which might slow down the robot's movement and responsiveness to commands.
