@@ -56,11 +56,11 @@ To determine the range, I aimed my TOF sensors at a nearby wall and steadily mov
 Here, I took 10 separate measurements at distances of 1500mm and 500mm to ascertain how repeatable the measurements are. In both measurements, the measured data was around the same value but with deviations of up to 4mm. In the 1500mm case, most of the measured distances deviated from the expected value by only 1mm, and in the 500mm case, it was about 1 - 2mm. 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2c02bb69-0a0a-4971-a952-d9cf5a1e2cde">  <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/af0eee43-5fb8-4fdc-821e-a027d997b3f9">
 
-#### Accuracy: 1.8mm 
+#### Accuracy: 1.8mm
 Using the same data from the repeatability measurements, I averaged the deviations from the measurements and calculated the accuracy to be around 4mm of the expected value.  
 
 
-### Time of Flight Sensor Speed 
+## Time of Flight Sensor Speed
 Here, at every iteration of the main loop, I tranmitted time stamps over BLE whenever the TOF sensors are collating data. Using about 100 of these time stamps, I computed the differences between each time stamp and the previous one. With this data, I was able to approximate the rate at which the TOF sensors were sampling values.  
 
 <img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/0d75b66e-61a7-41b2-bcdf-37094d9dac6e">  
