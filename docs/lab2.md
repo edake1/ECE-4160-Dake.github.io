@@ -102,6 +102,10 @@ Additionally, I decided to send different types of data in separate batches, rat
 
 And, for transmission efficiency, data is sent over BLE as strings, rather than in their original data types (such as int or float). This strategy is more memory-efficient and helps maintain the system’s performance within the constraints of BLE communication.
 
+### Five seconds worth of data
+I implemented a command that collated five seconds worth of IMU data and transmitted it over BLE to the computer. The transmitted data includes the current timestamp, accelerometer pitch, and accelerometer roll values. After approximately ten transmissions, I achieved an average of 318 strings transmitted each time.  
+<img width="1000" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/346596cc-1e70-4753-9f52-2f490206196d">
+
 
 ## STUNT 
 After testing my RC car, I was impressed by its performance. It responded quickly and accurately, adeptly performing flips, quick turns, and spins with specific key commands. Notably, the car's ability to abruptly stop at full speed and execute a flip was particularly striking, and I'm excited to replicate this maneuver. Details of the car's stunts are provided below.
