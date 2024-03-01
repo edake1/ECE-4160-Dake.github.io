@@ -82,9 +82,20 @@ Referencing the gyroscope equations from lectures and using the code below, I co
   gyr_yaw[imu_index] = gyr_yaw[imu_index - 1] + myICM.gyrZ() * dt;
   ...
 ```
-Even with externally induced noise, the gyroscope data seemed fairly stable and the fourier spectrum plot is very similar to that of the accelerometer pitch and roll.  
+Even with externally induced noise, the gyroscope data seemed fairly stable and the fourier spectrum plot is very similar to that of the accelerometer pitch and roll. Using the code below, we implemented the complimentary filter for the gyroscope and the plot for the filtered gyroscope data is shown below. I chose an alpha value of about 0.4 for my filter. 
+
+```
+  ...
+  T = imu_time[imu_index] - imu_time[imu_index - 1]; 
+  dt = T * 0.001; // get dt in seconds 
+  alpha = 0.4;
+  gyr_pitch_cf[imu_index] = (gyr_pitch_cf[imu_index] + myICM.gyrY() * dt) * (1 - alpha) + alpha * acc_roll[imu_index];
+  gyr_roll_cf[imu_index] = (gyr_pitch_cf[imu_index] + myICM.gyrY() * dt) * (1 - alpha) + alpha * acc_roll[imu_index];
+...
+```
 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/147cfffe-2dd5-4548-9ffc-25b03bff09f1">  <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/74d06f9f-5d1d-4912-8e18-2d62738a7b43">  
+
 
 ## Data Sampling 
 ### Speed of main loop 
