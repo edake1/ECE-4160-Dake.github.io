@@ -19,6 +19,10 @@ For hooking up multiple sensors, the QWIIC breakout board came in handly. The br
 In the picture above, you can see the two time of flight sensors connected via the breakout board. See below for picture of sensors working in parallel.  
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ee059b13-2c8d-44b6-b8d0-fab3e606a5a1">  
 
+### Schematic  
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/059b3994-95c1-40a5-8f70-d3b86f6441c7">  
+
+
 ### I2C Sensor Address 
 When the first Time of Tlight sensor was connected to the board, its address was printed in the serial monitor after it was detected during scanning. Per the sensor manual, the address of the sensor is supposed to be <em>0X52</em> but the address displayed was <em>0X29</em>. There was no cause for alarm at this point as <em>0X29</em> was simply the default address of <em>0X52</em> bitshifted to the right. 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/a513ce7c-1c69-494f-9195-3ea142a945a1">
