@@ -92,7 +92,7 @@ In the main loop, I focused on using if-expressions to determine whether to exec
 
 <img width="1000" alt="sampling-rates" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2ca3b159-1e8c-40d6-86ba-2d31c9676ef7">  
 
-During each iteration of the main loop, I aggregated timestamps corresponding to when the IMU collected data and transmitted them via BLE. Subsequently, I implemented a handler to analyze these timestamps and compute the time differences between each timestamp and its preceding one. This analysis enabled me to estimate the IMU's sampling rate. Notably, the main loop executed approximately once every <em>0.03 milliseconds</em>, while the IMU sampled values roughly every <em>18.3 milliseconds</em>. Based on this data, it appears that the main loop on the Artemis runs approximately <em>600</em> times faster than the IMU's rate of producing new values.
+During each iteration of the main loop, I aggregated timestamps corresponding to when the IMU collected data and transmitted them via BLE. Subsequently, I implemented a handler to analyze these timestamps and compute the time differences between each timestamp and its preceding one. This analysis enabled me to estimate the IMU's sampling rate. Notably, the main loop executed approximately once every <em>0.03 milliseconds</em>, while the IMU sampled values roughly every <em>18.3 milliseconds</em>. Based on this data, it appears that the main loop on the Artemis runs approximately <em>600 times</em> faster than the IMU's rate of producing new values.
 
 
 ### Data storage and transfer protocol
