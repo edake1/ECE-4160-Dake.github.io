@@ -27,8 +27,6 @@ The recorded sensor address of <em>0X29</em> identified the Time of Flight senso
 
 The implementation involved shutting down one of the TOF sensors, assigning a new address and turning it back on. The active-low XSHUT pin connected to one of the TOF sensors made this possible as we had to just set it to low to turn off the sensor. See image below for serial output of I2C addresses before and after assignment.  
 
-<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/e5b05c1c-8ddf-45ff-9ba7-8285989f9680">  
-
 ```
 ...
   pinMode(SHUTDOWN_PIN, OUTPUT); 
@@ -41,6 +39,8 @@ The implementation involved shutting down one of the TOF sensors, assigning a ne
   Serial.println("Sensor #2 online!");
 ...
 ```
+
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/e5b05c1c-8ddf-45ff-9ba7-8285989f9680">  
 
 ### Sensor placement 
 To ensure accurate obstacle detection, sensor placement is critical. I positioned one sensor at the front and another at the back of the car. This setup enables the robot to detect obstacles from both its front and rear positions, providing comprehensive situational awareness. Alternatively, installing both sensors at the front would have limited the robot's detection capabilities to only the front, potentially leaving blind spots at the rear.
