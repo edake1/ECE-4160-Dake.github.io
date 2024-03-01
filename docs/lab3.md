@@ -96,7 +96,10 @@ After successfully configuring the two time-of-flight sensors, I initiated their
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/4acd78df-0ac6-4a95-bdd0-b72908d01812">
 
 
+### Thoughts
+I enjoyed every bit of the lab but I had to grapple with a persistent bug before I was able to get my time of flight sensors working in my main <em>ble_arduino.ino</em> file. I was getting a 
 
+<img width="699" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/aea173b7-8ecc-47b8-8d65-ae70bd891275">
 
 
 
