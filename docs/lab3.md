@@ -90,6 +90,11 @@ The code implementation just consists of an if statement that checks if we have 
   ...
 ```
 
+### Time of Flight Sensor Data over BLE
+After successfully configuring the two time-of-flight sensors, I initiated their operation, collected distance measurements over a specified duration, and transmitted timestamped distance data via BLE to the computer. The resulting plot displays data from 530 recorded points.  
+
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/4acd78df-0ac6-4a95-bdd0-b72908d01812">
+
 
 
 
