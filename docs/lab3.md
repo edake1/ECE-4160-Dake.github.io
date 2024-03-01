@@ -48,17 +48,17 @@ To ensure accurate obstacle detection, sensor placement is critical. I positione
 ### Time of Flight Sensor Modes 
 The TOF sensor has some flexibility in the mode for taking measurements based on the range needed. You can either set the distance ranging mode to short or long via the <em>setDistanceModeShort()</em> and <em>setDistanceModeLong() methods. I decided to go with the short distance mode because I figured if the robot is going to be performing stunts, I want it to be maximally sensitive and accurate. The long distance mode sacrifices sensitivity to ambient noise for greater range so the short distance mode was a better option in this case. 
 
-###Short Distance Mode Statistics
+### Short Distance Mode Statistics
 #### Range: 10mm - 1686 mm 
 To determine the range, I aimed my TOF sensors at a nearby wall and steadily moved backward until they were out of range. I recorded the distances measured by the TOF sensors at the instant they were out of range multiple times and averaged the results to establish the farthest range which was about <em>1686 mm</em>. 
-
 
 #### Repeatability
 Here, I took 10 separate measurements at distances of 1500mm and 500mm to ascertain how repeatable the measurements are. In both measurements, the measured data was around the same value but with deviations of up to 4mm. In the 1500mm case, most of the measured distances deviated from the expected value by only 1mm, and in the 500mm case, it was about 1 - 2mm. 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2c02bb69-0a0a-4971-a952-d9cf5a1e2cde">  <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/af0eee43-5fb8-4fdc-821e-a027d997b3f9">
 
 #### Accuracy: 1.8mm 
-Using the same data from the repeatability measurements, I averaged the deviations from the measurements and calculated the accuracy to be around 4mm of the expected value. 
+Using the same data from the repeatability measurements, I averaged the deviations from the measurements and calculated the accuracy to be around 4mm of the expected value.  
+
 
 ### Time of Flight Sensor Speed 
 Here, at every iteration of the main loop, I tranmitted time stamps over BLE whenever the TOF sensors are collating data. Using about 100 of these time stamps, I computed the differences between each time stamp and the previous one. With this data, I was able to approximate the rate at which the TOF sensors were sampling values.  
