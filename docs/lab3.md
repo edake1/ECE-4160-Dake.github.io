@@ -20,6 +20,8 @@ In the picture above, you can see the two time of flight sensors connected via t
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ee059b13-2c8d-44b6-b8d0-fab3e606a5a1">  
 
 ### Schematic  
+The Time of Flight sensors were integrated with the Artemis board following the schematic depicted below. During the wiring process, one of the sensors was outfitted with an XSHUT pin, which proved useful for I2C address assignment. Given the requirement for two time of flight sensors, we had to use the QWIIC breakout board (multiport) to expand the number of available ports, especially considering the need to also connect the IMU to the Artemis board.  
+
 <img src="images/schematic.jpeg" width="800">
 
 ### I2C Sensor Address 
