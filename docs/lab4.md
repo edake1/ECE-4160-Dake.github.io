@@ -43,11 +43,12 @@ if (motor_run){
   }
 ...
 ```
-### Powering motors from battery 
+For one set of wheels, a signal value of 100 was enough to set to spinning really fast but for the other set, even a signal value of 200 made it spin only slightly so there was the need for some calibration. 
+![Wheels spinning in both directions](https://youtu.be/MEnhIz9oGvQ)
 
+### Powering motors from battery 
+I powered the motors using a single 850mAh Li-Ion battery and it worked as it did with the power supply. 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5d5c1931-d28b-467d-a665-0f4a5a34b2e5">
 
-![Wheels spinning in both directions](https://youtu.be/MEnhIz9oGvQ)
-Wheels: https://youtu.be/MEnhIz9oGvQ
 
 
