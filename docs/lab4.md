@@ -47,7 +47,7 @@ if (motor_run){
 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5d5c1931-d28b-467d-a665-0f4a5a34b2e5">
 
-![](https://youtu.be/MEnhIz9oGvQ)
+![Wheels spinning in both directions](https://youtu.be/MEnhIz9oGvQ)
 Wheels: https://youtu.be/MEnhIz9oGvQ
 
 
