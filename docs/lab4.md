@@ -22,5 +22,8 @@ Per the wiring diagram, I soldered the appropriate inputs and outputs to achieve
 ### Powering Motor Drivers 
 From the wiring diagram above, we powered both motor drivers/motors with a 3.7V Li-Ion battery separate from the battery used to power the Artemis. This was due to a couple of reasons but mainly to ensure isolatio of power systems. The motors may generate electrical or electromagnetic noise which may cause interference with the Artemis. Also, the motors usually require a higher voltage and current as compared to the Artemis and may even draw larger currents during start-up or high load conditions which may interfere with the power needs and general operation of the Artemis. 
 
+## Motors 
+![](https://youtu.be/MEnhIz9oGvQ)
+Wheels: https://youtu.be/MEnhIz9oGvQ
 
 
