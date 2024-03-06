@@ -213,7 +213,9 @@ Working on this lab has been both enjoyable and enlightening. While navigating t
 
 ### Other Labs  
 * [LAB 2](docs/lab2.md)  
-* [LAB 3](docs/lab3.md)  
+* [LAB 3](docs/lab3.md)
+*  [LAB 4](docs/lab4.md)  
+ 
 
 
 
