@@ -50,9 +50,20 @@ For one set of wheels, a signal value of 100 was enough to set to spinning reall
 I powered the motors using a single 850mAh Li-Ion battery and it worked as it did with the power supply. 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5d5c1931-d28b-467d-a665-0f4a5a34b2e5">
 
+### Power supply and oscilloscope setup  
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2d08e92d-b231-4d1d-a54b-e0f60aa8f924">  
+
 ### Lower Limit PWM 
-I chose a random low PWM value of about 30 as a base limit and started sending PWM signals in increments of 5 to the motors to ascertain the lower limit for causing the wheels to spin. The results are summarized in the table below.  
+In my investigation, I initiated a series of PWM tests, starting from a random low value of approximately 30, and incrementally increased the PWM signals by 5 to determine the minimum threshold required to set the wheels in motion. The outcomes of this analysis are summarized in the table provided below:
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/de673593-381b-4663-8458-51a898f756c3">  
+
+#### Calibration 
+After examining the results of my lower limit PWM experiment, it was clear that one motor operated faster than the other. To ensure the car moved in a straight line, I tested various PWM combinations. When I applied a PWM signal of around 100 to both motors simultaneously, the car spun in a near-perfect circle, confirming the speed difference between the motors.
+
+Knowing this, I tried different PWM pairs. The car only moved straight with PWM value pairs like (70, 140) and (90, 180), where the lower value indicated the faster motor.
+
+
+
 
 
 
