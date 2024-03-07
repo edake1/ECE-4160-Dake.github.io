@@ -54,7 +54,7 @@ I powered the motors using a single 850mAh Li-Ion battery and it worked as it di
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2d08e92d-b231-4d1d-a54b-e0f60aa8f924">  
 
 ### Lower Limit PWM 
-In my investigation, I initiated a series of PWM tests, starting from a random low value of approximately 30, and incrementally increased the PWM signals by 5 to determine the minimum threshold required to set the wheels in motion. The outcomes of this analysis are summarized in the table provided below:
+In my investigation, I initiated a series of PWM tests, starting from a random low value of approximately 30, and incrementally increased the PWM signals by 5 to determine the minimum threshold required to set the wheels in motion. The outcomes of this analysis are summarized in the table provided below:  
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/de673593-381b-4663-8458-51a898f756c3">  
 
 #### Calibration 
