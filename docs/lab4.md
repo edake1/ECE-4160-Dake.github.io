@@ -56,11 +56,15 @@ I powered the motors using a single 850mAh Li-Ion battery and it worked as it di
 ### Lower Limit PWM 
 In my investigation, I initiated a series of PWM tests, starting from a random low value of approximately 30, and incrementally increased the PWM signals by 5 to determine the minimum threshold required to set the wheels in motion. The outcomes of this analysis are summarized in the table provided below:  
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/de673593-381b-4663-8458-51a898f756c3">  
+From the table above, the motors only began to spin in air at PWM values of 40 and 50 respectively. On the ground however, these PWM values were not enough to overcome the friction between the wheels and the ground to set the car in motion. Testing with higher values showed that the car only moved, albeit slowly, at PWM values of 73 and 80. 
 
 #### Calibration 
 After examining the results of my lower limit PWM experiment, it was clear that one motor operated faster than the other. To ensure the car moved in a straight line, I tested various PWM combinations. When I applied a PWM signal of around 100 to both motors simultaneously, the car spun in a near-perfect circle, confirming the speed difference between the motors.
 
-Knowing this, I tried different PWM pairs. The car only moved straight with PWM value pairs like (70, 140) and (90, 180), where the lower value indicated the faster motor.
+Knowing this, I tried different PWM pairs. The car only moved straight with PWM value pairs like (70, 83), (90, 106), (100, 130), (110, 145), (120, 160), and (150, 215) where the lower value indicated the faster motor between the two. 
+
+##### Car moving in a straight path  
+![Car moving in straight line for 6ft](https://youtube.com/shorts/BTzAY0qQOXw?feature=share)
 
 
 
