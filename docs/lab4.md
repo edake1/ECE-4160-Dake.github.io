@@ -52,7 +52,7 @@ I powered the motors using a single 850mAh Li-Ion battery and it worked as it di
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5d5c1931-d28b-467d-a665-0f4a5a34b2e5">
 
 ### Power supply and oscilloscope setup
-<img width="400" alt="oscilloscope" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/99a86b93-de39-4281-b040-904b1d78762e">  
+<img width="500" alt="oscilloscope" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/99a86b93-de39-4281-b040-904b1d78762e">  
 
 <img width="500" alt="osc-power-supply-hookup" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2d08e92d-b231-4d1d-a54b-e0f60aa8f924">  
 
