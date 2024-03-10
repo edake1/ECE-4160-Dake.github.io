@@ -69,7 +69,7 @@ Knowing this, I tried different PWM pairs. The car only moved straight with PWM 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/650a447c-cf8f-4208-8ba9-61820408597c">  
 
 ##### Car moving in a straight path  
-![Car moving in straight line for 6ft](https://youtube.com/shorts/BTzAY0qQOXw?feature=share)
+![Car moving in straight line for 6ft](https://www.youtube.com/shorts/BTzAY0qQOXw?feature=share)
 
 
 
