@@ -51,10 +51,10 @@ For one set of wheels, a signal value of 100 was enough to set it spinning reall
 I powered the motors using a single 850mAh Li-Ion battery and it worked as it did with the power supply. 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5d5c1931-d28b-467d-a665-0f4a5a34b2e5">
 
-### Power supply and oscilloscope setup
-<img width="500" alt="oscilloscope" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/99a86b93-de39-4281-b040-904b1d78762e">  
-
+### Power supply and oscilloscope setup  
 <img width="500" alt="osc-power-supply-hookup" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2d08e92d-b231-4d1d-a54b-e0f60aa8f924">  
+
+<img width="500" alt="oscilloscope" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/99a86b93-de39-4281-b040-904b1d78762e">  
 
 ### Lower Limit PWM 
 In my investigation, I initiated a series of PWM tests, starting from a random low value of approximately 30, and incrementally increased the PWM signals by 5 to determine the minimum threshold required to set the wheels in motion. The outcomes of this analysis are summarized in the table provided below:  
@@ -71,7 +71,7 @@ Knowing this, I tried different PWM pairs. The car only moved straight with PWM 
 ##### Car moving in a straight path  
 [Car moving in straight line for 6ft](https://www.youtube.com/shorts/BTzAY0qQOXw?feature=share)  
 
-
+## Components secured in car  
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/68d44c02-ce43-4064-8173-ba1b46096a2d">  
 
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/0b90ce02-4c6d-4dfd-9e11-a107b287a355">
