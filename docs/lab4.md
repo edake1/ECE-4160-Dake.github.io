@@ -48,7 +48,8 @@ For one set of wheels, a signal value of 100 was enough to set it spinning reall
 [Wheels spinning in both directions](https://youtu.be/MEnhIz9oGvQ)
 
 ### Powering motors from battery 
-I powered the motors using a single 850mAh Li-Ion battery and it worked as it did with the power supply. 
+I powered the motors using a single 850mAh Li-Ion battery and it worked as it did with the power supply.  
+
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5d5c1931-d28b-467d-a665-0f4a5a34b2e5">
 
 ### Power supply and oscilloscope setup  
