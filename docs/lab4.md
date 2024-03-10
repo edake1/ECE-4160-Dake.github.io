@@ -45,7 +45,7 @@ if (motor_run){
 ```
 For one set of wheels, a signal value of 100 was enough to set to spinning really fast but for the other set, even a signal value of 200 made it spin only slightly so there was the need for some calibration.  
 
-![Wheels spinning in both directions](https://youtu.be/MEnhIz9oGvQ)
+Wheels spinning in both directions: https://youtu.be/MEnhIz9oGvQ
 
 ### Powering motors from battery 
 I powered the motors using a single 850mAh Li-Ion battery and it worked as it did with the power supply. 
@@ -69,8 +69,7 @@ Knowing this, I tried different PWM pairs. The car only moved straight with PWM 
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/650a447c-cf8f-4208-8ba9-61820408597c">  
 
 ##### Car moving in a straight path  
-![Car moving in straight line for 6ft](https://www.youtube.com/shorts/BTzAY0qQOXw?feature=share)
-
+Car moving in straight line for 6ft: https://www.youtube.com/shorts/BTzAY0qQOXw?feature=share
 
 
 
