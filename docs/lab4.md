@@ -64,7 +64,9 @@ From the table above, the motors only began to spin in air at PWM values of 40 a
 #### Calibration 
 After examining the results of my lower limit PWM experiment, it was clear that one motor operated faster than the other. To ensure the car moved in a straight line, I tested various PWM combinations. When I applied a PWM signal of around 100 to both motors simultaneously, the car spun in a near-perfect circle, confirming the speed difference between the motors.
 
-Knowing this, I tried different PWM pairs. The car only moved straight with PWM value pairs like (70, 83), (90, 106), (100, 130), (110, 145), (120, 160), and (150, 215) where the lower value indicated the faster motor between the two. 
+Knowing this, I tried different PWM pairs. The car only moved straight with PWM value pairs like (70, 83), (90, 106), (100, 130), (110, 145), (120, 160), and (150, 215) where the lower value indicated the faster motor between the two. Using the pairs above, the line of best fit was computed as <em>1.72485929341561 * x - 45.43903844849798</em>.  
+
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/650a447c-cf8f-4208-8ba9-61820408597c">  
 
 ##### Car moving in a straight path  
 ![Car moving in straight line for 6ft](https://youtube.com/shorts/BTzAY0qQOXw?feature=share)
