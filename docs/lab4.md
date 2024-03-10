@@ -43,7 +43,7 @@ if (motor_run){
   }
 ...
 ```
-For one set of wheels, a signal value of 100 was enough to set to spinning really fast but for the other set, even a signal value of 200 made it spin only slightly so there was the need for some calibration.  
+For one set of wheels, a signal value of 100 was enough to set it spinning really fast but for the other set, even a signal value of 200 made it spin only slightly so there was the need for some calibration.  
 
 [Wheels spinning in both directions](https://youtu.be/MEnhIz9oGvQ)
 
