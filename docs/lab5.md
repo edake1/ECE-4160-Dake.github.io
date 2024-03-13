@@ -1,6 +1,6 @@
 
 # LAB 5: Linear PID control and Linear interpolation
-This purpose of this lab is to help us get familiar with PID control. In this document, I discuss my implementation of a PID controller for my robot. 
+The purpose of this lab is to provide us with hands-on experience and practical understanding of PID (Proportional-Integral-Derivative) control. Throughout this document, I delve into the intricacies of my PID controller implementation tailored specifically for my robot. 
 
 <b>PARTS REQUIRED</b> 
 - 1 x SparkFun RedBoard Artemis Nano
