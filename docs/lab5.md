@@ -103,6 +103,6 @@ For my first test, I just decided to test with a high Kp value just to see the b
 ##### Kp = 0.01 
 <img width="600" alt="Plot of time vs distance" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/14c8e48b-a279-43e0-a733-11af7b05bcf4">  
 
-The plot above is for two iterations of the test. You can observe from the plot that the robot first overshot and was about 125 mm away from the wall, then it backed up to about 360 mm then proceeded to steadily position itself at the setpoint in small oscillations. The second peak at about <em>1500 mm</em> was as a result of me changing the position of the robot for another run. Again, a similar behavior is observed where the robot overshoots and backs up to the setpoint.
+The plot above is for two iterations of the test. You can observe from the plot that the robot first overshot and was about 125 mm away from the wall, then it backed up to about 360 mm then proceeded to steadily position itself at the setpoint in small oscillations. The second peak at about <em>1500 mm</em> was as a result of changing the position of the robot for another run. Again, a similar behavior is observed where the robot overshoots and backs up to the setpoint.
 
 
