@@ -76,6 +76,28 @@ if (motor_run && pid_index < PID_DATA_SIZE){
 
 There is a some disparity in the PWM values at which my motors spin at relatively similar speeds so I implemented a calibration factor that ensures that for a given PID value, the motors spin at similar speeds to avoid unnecessary turns or rotations during motion. The function <em>find_speed()</em> in the code snippet above essentially takes a PID value and ensures it is within the range of PWM values, (0, 255) and also adjusts the speed if the PID value is within range but lower than the lower PWM limit of each of the motors. Meanwhile, the function <em>calibrated_pwm()</em> in the code snippet above applies the calibration factor to ensure that the other motor spins at a comparable speed.
 
+I implememted a <em>PID()</em> function which is the core of the Proportional controller. It takes a certain setpoint, the current position of the robot, and a kp value and returns an adjusted value which is <em>proportional</em> to the error between the current position of the robot and the setpoint. 
+
+```
+float PID(int index, int set_point, float kp, float ki, float kd, int distance){
+// get error 
+pid_err = set_point - distance; 
+// append error to error array
+pid_error[index] = pid_err;
+
+// sum errors - integral 
+integrator += pid_err * pid_dt;
+// find derivative 
+if (index >= 1){
+  derivative = -(pid_error[index] - pid_error[index - 1]) / pid_dt; 
+} else {
+  derivative = 0.0; 
+}
+return kp * pid_err; 
+}
+```
+The above implementation does not factor in the I and D controllers yet so it just outputs a value proportional to the current error in position relative to the setpoint. 
+
 
 
 
