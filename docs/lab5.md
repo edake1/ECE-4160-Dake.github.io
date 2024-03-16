@@ -106,6 +106,17 @@ For my first test, I just decided to test with a high Kp value just to see the b
 The plot above is for two iterations of the test. You can observe from the plot that the robot first overshot and was about 125 mm away from the wall, then it backed up to about 360 mm then proceeded to steadily position itself at the setpoint in small oscillations. The second peak at about <em>1500 mm</em> was as a result of changing the position of the robot for another run. Again, a similar behavior is observed where the robot overshoots and backs up to the setpoint.
 
 ##### Trial 1: Kp = 0.02
-[Trial 1](https://youtube.com/shorts/-_K9_mgNgjU?feature=share)
-[Trial 2](https://youtube.com/shorts/j6J2BNOmuCI?feature=share)
-[Trial 3](https://youtube.com/shorts/YJJzpQZE2X0?feature=share)
+[Trial 1](https://youtube.com/shorts/-_K9_mgNgjU?feature=share)  
+
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/91ce6a13-6987-4b95-98c1-884fa67bbe9e">  
+
+[Trial 2](https://youtube.com/shorts/j6J2BNOmuCI?feature=share)  
+
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/f49850b6-6696-4723-83b5-4e1b094b39bf">  
+
+[Trial 3](https://youtube.com/shorts/YJJzpQZE2X0?feature=share)  
+
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ba8b9ddc-03f5-471f-9b2e-822db80be239">   
+
+
+
