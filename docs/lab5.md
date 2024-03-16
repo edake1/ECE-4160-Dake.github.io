@@ -105,4 +105,7 @@ For my first test, I just decided to test with a high Kp value just to see the b
 
 The plot above is for two iterations of the test. You can observe from the plot that the robot first overshot and was about 125 mm away from the wall, then it backed up to about 360 mm then proceeded to steadily position itself at the setpoint in small oscillations. The second peak at about <em>1500 mm</em> was as a result of changing the position of the robot for another run. Again, a similar behavior is observed where the robot overshoots and backs up to the setpoint.
 
-
+##### Trial 1: Kp = 0.02
+[Trial 1](https://youtube.com/shorts/-_K9_mgNgjU?feature=share)
+[Trial 2](https://youtube.com/shorts/j6J2BNOmuCI?feature=share)
+[Trial 3](https://youtube.com/shorts/YJJzpQZE2X0?feature=share)
