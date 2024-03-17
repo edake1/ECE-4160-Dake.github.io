@@ -124,3 +124,5 @@ TOF sensor returns data every 90.9 ms or at 11 Hz
 
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ba8b9ddc-03f5-471f-9b2e-822db80be239">  
 
+Over the course of the three trials, the robot was moving at an average velocity of -0.12 m/s or -0.12 mm/ms. 
+
