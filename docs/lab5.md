@@ -113,11 +113,13 @@ TOF sensor returns data every 63.8 ms or at 15.7 Hz
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/91ce6a13-6987-4b95-98c1-884fa67bbe9e">   
 
 [Trial 2](https://youtube.com/shorts/j6J2BNOmuCI?feature=share)  
+
 TOF sensor returns data every 64.6 ms or at 15.5 Hz  
 
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/f49850b6-6696-4723-83b5-4e1b094b39bf">    
   
 [Trial 3](https://youtube.com/shorts/YJJzpQZE2X0?feature=share)  
+
 TOF sensor returns data every 90.9 ms or at 11 Hz
 
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ba8b9ddc-03f5-471f-9b2e-822db80be239">  
