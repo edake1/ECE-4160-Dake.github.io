@@ -130,5 +130,30 @@ TOF sensor returns data every 90.9 ms or at 11 Hz
 
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ba8b9ddc-03f5-471f-9b2e-822db80be239">  
 
-Over the course of the three trials, the robot was moving at an average velocity of -0.12 m/s or -0.12 mm/ms. 
+Over the course of the three trials, the robot was moving at an average velocity of -0.12 m/s or -0.12 mm/ms.  
+
+The results observed at a Kp value of 0.02 were fairly good but the amplitude of oscillations around the setpoint were a little large so I decided to test with other kp values to arrive at a better kp value. See below for plots of other trials. 
+
+##### Kp = 0.01 
+
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/e0429307-1080-4faf-9577-ebfe29788cba">  
+
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/37041fee-cedf-423e-8b1d-1960e103c326">  
+
+##### Kp = 0.012  
+
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ea407ad6-9ea9-477f-8c7b-4ca405dc13f5">
+
+##### Kp = 0.017  
+
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/f046dc9f-8382-45cb-86c0-a1fd35ce50a1">  
+
+<img width="722" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ca293111-0d7b-4940-b13b-be8eefa3bd86">
+
+
+
+
+
+
+
 
