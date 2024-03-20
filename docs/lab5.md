@@ -147,8 +147,7 @@ The results observed at a Kp value of 0.02 were fairly good but the amplitude of
 ##### Kp = 0.017  
 
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/f046dc9f-8382-45cb-86c0-a1fd35ce50a1">  
-
-<img width="722" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ca293111-0d7b-4940-b13b-be8eefa3bd86">
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/ca293111-0d7b-4940-b13b-be8eefa3bd86">
 
 
 
