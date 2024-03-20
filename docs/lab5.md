@@ -87,13 +87,19 @@ pid_error[index] = pid_err;
 
 // sum errors - integral 
 integrator += pid_err * pid_dt;
+if (integrator > max_integral_value) {
+  integrator = max_integral
+}
+if (integrator < -max_integral_value){
+  integrator = -max_integral_value
+}
 // find derivative 
 if (index >= 1){
   derivative = -(pid_error[index] - pid_error[index - 1]) / pid_dt; 
 } else {
   derivative = 0.0; 
 }
-return kp * pid_err; 
+return kp * pid_err + kd * derivative + ki * integrator; 
 }
 ```
 The above implementation does not factor in the I and D controllers yet so it just outputs a value proportional to the current error in position relative to the setpoint. 
