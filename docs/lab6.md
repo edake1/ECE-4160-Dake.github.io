@@ -100,3 +100,6 @@ float imu_PID(int ref_angle, int index, float gyrZ, float kp, float ki, float kd
 }
 
 ```
+
+### Tuning 
+
