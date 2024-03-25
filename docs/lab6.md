@@ -104,8 +104,13 @@ float imu_PID(int ref_angle, int index, float gyrZ, float kp, float ki, float kd
 
 ```
 #### Trials 
-##### Kp = 5.0
-<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/28daf959-7233-44dd-9ec1-81ce137cec26">
+##### P Controller: Kp = 5.0, Setpoint = 180°
+I first implemented the proportional controller. By passing in a kp value of 5.0, my imu_PID() function returns the product of the error (desired orientation - current orientation) and the kp value. An <em>ORIENTATION_CONTROL</em> command was implemented in Arduino to oversee all orientation control logic. For the first trial, it is observed (see accompanying video below) that the robot jerks into position once the orientation control command is ran. When perturbations are introduced into the system, the robot tries to re-orient itself to minimize the error between the current orientation and the setpoint.  
+
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/fad8d2af-dade-4ae8-836c-46c93fa32133">
+
+The graph above shows perturbations about the setpoint of 180° and the robot's attempts to re-orient itself to align with the setpoint. The peaks in the graph show the perturbations about the setpoint and the orange line serves as reference to show how the robot nicely snaps into place when disturbed. 
+
 
 [Trial 1](https://youtu.be/JP0k8hgsCTs)  
 
