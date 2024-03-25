@@ -31,7 +31,7 @@ case GYROSCOPE:
 ```
 The code snippet above is the GYROSCOPE command used to send IMU data over BLE. 
 
-### Orientation Control 
+## Orientation Control 
 My orientation control loop essentially implemented logic to compute a PID value given a reference angle and the current orientation of the robot. Based on the PID value returned, the motors move in opposing directions to adjust the orientation of the robot till the desired orientation (reference angle) is reached. See the code snippet below for orientation loop logic. 
 
 ```
@@ -62,7 +62,7 @@ if (myICM.dataReady()){
   }
 ```
 
-#### PID value from IMU data
+### PID value from IMU data
 A function named imu_PID has been developed to calculate the PID value essential for motor adjustments to align the robot's orientation. This function accepts parameters such as the reference angle, gyroscope data, as well as the proportional (kp), integral (ki), and derivative (kd) constants. Upon processing, it yields the appropriate PID value.
 
 When the discrepancy between the desired angle and the current orientation of the robot is positive, indicating a positive PID value, the function triggers analogWrite commands to manipulate the motors. This manipulation entails inducing opposite motions in the motors; for instance, the left motor advances while the right motor retreats. This counteractive motion generates a rotational effect about the Z-axis, facilitating the robot's alignment. Through repeated iterations, this corrective motion gradually guides the robot to align with the desired orientation. See below for the imu_PID function. 
@@ -103,8 +103,8 @@ float imu_PID(int ref_angle, int index, float gyrZ, float kp, float ki, float kd
 }
 
 ```
-#### Trials 
-##### P Controller: Kp = 5.0, Setpoint = 180°
+### Trials 
+#### P Controller: Kp = 5.0, Setpoint = 180°
 I first implemented the proportional controller. By passing in a kp value of 5.0, my imu_PID() function returns the product of the error (desired orientation - current orientation) and the kp value. An <em>ORIENTATION_CONTROL</em> command was implemented in Arduino to oversee all orientation control logic. For the first trial, it is observed (see accompanying video below) that the robot jerks into position once the orientation control command is ran. When perturbations are introduced into the system, the robot tries to re-orient itself to minimize the error between the current orientation and the setpoint.  
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/fad8d2af-dade-4ae8-836c-46c93fa32133">
