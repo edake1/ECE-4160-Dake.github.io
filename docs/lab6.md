@@ -65,7 +65,7 @@ if (myICM.dataReady()){
 #### PID value from IMU data
 A function named imu_PID has been developed to calculate the PID value essential for motor adjustments to align the robot's orientation. This function accepts parameters such as the reference angle, gyroscope data, as well as the proportional (kp), integral (ki), and derivative (kd) constants. Upon processing, it yields the appropriate PID value.
 
-When the discrepancy between the desired angle and the current orientation of the robot is positive, indicating a positive PID value, the function triggers analogWrite commands to manipulate the motors. This manipulation entails inducing opposite motions in the motors; for instance, the left motor advances while the right motor retreats. This counteractive motion generates a rotational effect about the Z-axis, facilitating the robot's alignment. Through repeated iterations, this corrective motion gradually guides the robot to align with the desired orientation.
+When the discrepancy between the desired angle and the current orientation of the robot is positive, indicating a positive PID value, the function triggers analogWrite commands to manipulate the motors. This manipulation entails inducing opposite motions in the motors; for instance, the left motor advances while the right motor retreats. This counteractive motion generates a rotational effect about the Z-axis, facilitating the robot's alignment. Through repeated iterations, this corrective motion gradually guides the robot to align with the desired orientation. See below for the imu_PID function. 
 
 ```
 float imu_PID(int ref_angle, int index, float gyrZ, float kp, float ki, float kd){
@@ -103,8 +103,14 @@ float imu_PID(int ref_angle, int index, float gyrZ, float kp, float ki, float kd
 }
 
 ```
+#### Trials 
+##### Kp = 5.0
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/28daf959-7233-44dd-9ec1-81ce137cec26">
+
+[Trial 1](https://youtu.be/JP0k8hgsCTs)  
+
 
 ### Tuning 
 
-<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/28daf959-7233-44dd-9ec1-81ce137cec26">
+
 
