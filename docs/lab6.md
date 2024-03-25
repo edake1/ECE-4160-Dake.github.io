@@ -111,11 +111,16 @@ I first implemented the proportional controller. By passing in a kp value of 5.0
 
 The graph above shows perturbations about the setpoint of 180° and the robot's attempts to re-orient itself to align with the setpoint. The peaks in the graph show the perturbations about the setpoint and the orange line serves as reference to show how the robot nicely snaps into place when disturbed. 
 
-
 [Trial 1](https://youtu.be/JP0k8hgsCTs)  
 
+##### Trial 2
+In the second trial, the robot tried to re-orient itself to assume the orientation of the setpoint but it's movement was in small increments. When you look at the graph below, you observe that the robot steadily approaches the setpoint albeit very slowly. From the graph, the adjustment from 0° to about 150° took about 3 seconds which means the robot moves about the Z-axis at a rate of approximately 50°/s.  
 
-### Tuning 
+<img width="600" alt="Plot of time vs yaw" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/8388ab8e-e455-4bbc-8c82-14073b754fc7">
 
+##### Trial 3 
+Here, the robot moves steadily towards the setpoint of 180° but just like in the second trial, the movements are in small increments. In the trials so far, one set of wheels was visibly overpowering the other and thus responsible for most of the orientation adjustments. Getting both set of wheels to turn at comparable rates (may need to refine the wheel PWM calibration function) will speed up the rate at which the robot snaps into the desired direction.  
+
+<img width="600" alt="Plot of time vs yaw" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/dd9c9ca0-67b7-456d-99e2-fa0961ba556f">  
 
 
