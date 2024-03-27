@@ -143,6 +143,14 @@ For a kp value of about 4.0, the robot adjusts itself to align with the setpoint
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/72d12140-22c3-4dfc-9be0-5d11fc0a7d42">
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1c06051d-a70a-4467-b54e-89d35eddd5c0">
 
+#### Sampling Rate
+Throughout all the trials, I consistently gathered IMU measurements. The IMU provided data at a frequency of approximately 31 Hz, with measurements taken approximately every 32.3 milliseconds. During these trials, I logged every yaw data point recorded by the IMU for debugging purposes. However, this approach proved to be suboptimal due to the rapid filling of the array storing the yaw data, given the high sampling rate.
+
+To address this issue, I made adjustments to the code. Now, only every fifth yaw data point collected during the robot's orientation operation is stored. This modification effectively reduces the strain on memory resources while still retaining essential data for analysis and debugging purposes.
+
+
 #### Kp Discussion 
-I implemneted the P controller for orientation control and I got the controller to work for a Kp value of about 5.0. 
+I successfully implemented the proportional (P) controller for orientation control, achieving satisfactory performance with a Kp value of approximately 4.0. Upon experimentation, I observed that for Kp values exceeding 5 and falling below 3, the robot took significantly longer to reach a stable equilibrium point. Moreover, even when it approached stability, it consistently fell a few degrees short of the desired orientation.
+
+In contrast, with a Kp value around 4.0, although the robot still slightly undershoots the target orientation by a few degrees, it reaches a stable equilibrium point in considerably less time—typically less than a second. This demonstrates a favorable balance between speed of convergence and precision in orientation control achieved with an optimal Kp value.
 
