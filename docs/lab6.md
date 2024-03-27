@@ -125,13 +125,18 @@ Here, the robot moves steadily towards the setpoint of 180° but just like in th
 
 
 #### Kp = 4.0, Setpoint = 180°
+For a kp value of about 4.0, the robot adjusts itself to align with the setpoint but is usually a few degrees shy of the desired orientation. In all three trials (see plots below), the robot jerks quickly and almost aligns in the desired orientation and steadily oscillates about the setpoint the rest of the time.
 ##### Trial 1
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/04229dc1-f168-4105-98c8-f65fd882f61d">
-<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/96c3259b-6b5f-4149-90ab-395137e2909c">
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/96c3259b-6b5f-4149-90ab-395137e2909c">  
 
 ##### Trial 2 
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/9d867216-55e4-4102-b8c1-adaad5f09636">
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/958a6e6c-c9b0-4fb7-8138-6fd10665e013">  
 
-
+##### Trial 3
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/7280464f-489a-4c69-b179-7d4753c3786b">
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/e64f76c8-9c14-4035-83ab-513bb9e8a247">
 
 
 #### Kp Discussion 
