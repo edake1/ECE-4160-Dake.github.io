@@ -139,6 +139,10 @@ For a kp value of about 4.0, the robot adjusts itself to align with the setpoint
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/e64f76c8-9c14-4035-83ab-513bb9e8a247">
 
 
+#### Kp = 3.0, Setpoint = 180°
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/72d12140-22c3-4dfc-9be0-5d11fc0a7d42">
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1c06051d-a70a-4467-b54e-89d35eddd5c0">
+
 #### Kp Discussion 
 I implemneted the P controller for orientation control and I got the controller to work for a Kp value of about 5.0. 
 
