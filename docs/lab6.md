@@ -124,3 +124,16 @@ Here, the robot moves steadily towards the setpoint of 180° but just like in th
 <img width="600" alt="Plot of time vs yaw" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/dd9c9ca0-67b7-456d-99e2-fa0961ba556f">  
 
 
+#### Kp = 4.0, Setpoint = 180°
+##### Trial 1
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/04229dc1-f168-4105-98c8-f65fd882f61d">
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/96c3259b-6b5f-4149-90ab-395137e2909c">
+
+##### Trial 2 
+
+
+
+
+#### Kp Discussion 
+I implemneted the P controller for orientation control and I got the controller to work for a Kp value of about 5.0. 
+
