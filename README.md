@@ -216,7 +216,8 @@ Working on this lab has been both enjoyable and enlightening. While navigating t
 * [LAB 3](docs/lab3.md)
 * [LAB 4](docs/lab4.md)
 * [LAB 5](docs/lab5.md)
-* [LAB 6](docs/lab6.md)  
+* [LAB 6](docs/lab6.md)
+* [LAB 7](docs/lab7.md)  
 
  
  
