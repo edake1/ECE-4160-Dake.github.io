@@ -39,7 +39,10 @@ Bd = delta_t * B
 ```
 
 
-Filter Implementation 
+### Filter Implementation 
+The core of my Kalman filter implementation lies in the <em>kf(...)</em> function (see code snippet below), which performs the prediction and update steps of the Kalman filter algorithm. It takes the current state estimate, system covariance matrix, control input, and measurement as inputs and returns the updated state estimate and covariance matrix. 
+For my implementation, I implemented a kalman_filter_output() function that utilizes the <em>kf(...)</em> function to process time-of-flight (TOF) data alongside corresponding timestamps and PWM values. It outputs the refined estimates of the system state based on the provided inputs - this data is what is plotted alongside the measured time-of-flight data to showcase the efficiency of the filter. 
+
 ```
 # KALMAN FILTER IMPLEMENTATION
 # Discretizing matrices A, and B
