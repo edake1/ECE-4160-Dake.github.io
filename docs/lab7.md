@@ -46,10 +46,11 @@ Filter Implementation
 A, B = Ad, Bd
 
 # Uncertainty of system model 
-sigma_1, sigma_2 = 50, 50
+sigma_1, sigma_2 = 40, 50
 
 # Uncertainty of sensor readings
 sigma_3 = 1
+
 sig_u = np.array([[sigma_1 ** 2,0],[0, sigma_2 ** 2]]) # from lab manual 
 sig_z = np.array([[sigma_3 ** 2]]) # from lab manual 
 
@@ -87,20 +88,23 @@ def error(arr1, arr2):
 ```
 
 ### Kalman Filter Sanity Check 
+Upon completing the Kalman filter implementation, I proceeded to validate its performance within the controlled environment of Jupyter Notebook before deploying it onto the robot. This validation process involved importing time-of-flight (TOF) data collected across three trials and conducting a thorough evaluation.
 
-With the Kalman filter implementation completed, I proceeded to validate its performance in Jupyter Notebook before deploying it on the robot. Importing TOF data collected across three trials, I conducted a rigorous evaluation. Plotting the measured TOF data alongside the filter's output against time allowed for a comprehensive assessment of its efficacy. The resulting visualizations provided clear evidence of the filter's ability to accurately estimate the system's state amidst noise and uncertainty.
+By plotting the measured TOF data alongside the filter's output against time, I conducted a rigorous assessment of its efficacy. These visualizations provided clear evidence of the filter's capability to accurately estimate the system's state even in the presence of noise and uncertainty.
+
+In the pursuit of refining the model's accuracy, I experimented with various sigma values to define the uncertainty of the system model (sigma_1 and sigma_2) and the uncertainty of sensor readings (sigma_3). Through iterative experimentation, I identified the sigma values that best modeled the system's state, ultimately settling on the following values: sigma_1 = 40, sigma_2 = 50, and sigma_3 = 1. These values were found to yield optimal performance and effectively capture the dynamics of the system.
 
 Below are the plots for each trial:  
 
-Trial 1  
+Trial 1: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2547f1e5-851b-4ccf-9406-d9e1839faeb1">  
 
-Trial 2  
+Trial 2: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/16cc56df-a879-4d32-9331-bcafda3de294">  
 
-Trial 3  
+Trial 3: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1 
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/8a8ee827-8747-419b-8de1-2e655678df8a">  
 
