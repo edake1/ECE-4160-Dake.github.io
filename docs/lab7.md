@@ -15,8 +15,10 @@ The objective of Lab 7 is to implement a Kalman Filter, which will help speed up
 - 1 x Li-Ion 3.7V 850mAh battery
 
 
-## Kalman Filter Implementation 
-Computing parameters 
+## Kalman Filter Implementation
+### Computing Parameters and Constructing Matrices
+Before diving into the implementation details of the Kalman filter, it's crucial to compute the necessary parameters and construct the state space matrices. This initial setup lays the foundation for the subsequent filtering process.
+
 ```
 # Finding parameters
 ss_velocity  = 220
@@ -40,8 +42,14 @@ Bd = delta_t * B
 Filter Implementation 
 ```
 # KALMAN FILTER IMPLEMENTATION
-A, B = Ad, Bd 
-sigma_1, sigma_2, sigma_3 = 50, 50, 2
+# Discretizing matrices A, and B
+A, B = Ad, Bd
+
+# Uncertainty of system model 
+sigma_1, sigma_2 = 50, 50
+
+# Uncertainty of sensor readings
+sigma_3 = 1
 sig_u = np.array([[sigma_1 ** 2,0],[0, sigma_2 ** 2]]) # from lab manual 
 sig_z = np.array([[sigma_3 ** 2]]) # from lab manual 
 
@@ -61,7 +69,8 @@ def kf(mu, sigma, u, y):
 def kalman_filter_output(tof_data, tof_time, pwm_value): 
     pwms = [pwm_value] * len(tof_time)
     output = []
-    u = np.array([[tof_data[0]],[0]])
+    # initialize state of system 
+    u = np.array([[tof_data[0]],[0]]) # use first time of flight data point as initial state
     sigma = sig_u
     for _, pwm, distance in zip(tof_time, pwms, tof_data):
         u, sigma = kf(u, sigma, pwm / pwm_value, distance)
