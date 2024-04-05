@@ -78,11 +78,14 @@ def error(arr1, arr2):
 ```
 
 ### Kalman Filter Sanity Check 
-Trial 1
+Trial 1  
+
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2547f1e5-851b-4ccf-9406-d9e1839faeb1">  
 Trial 2  
+
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/16cc56df-a879-4d32-9331-bcafda3de294">  
 Trial 3  
+
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/8a8ee827-8747-419b-8de1-2e655678df8a">  
 
 
