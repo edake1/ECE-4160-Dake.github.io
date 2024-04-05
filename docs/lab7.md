@@ -96,15 +96,15 @@ In the pursuit of refining the model's accuracy, I experimented with various sig
 
 Below are the plots for each trial:  
 
-Trial 1: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1
+#### Trial 1: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/2547f1e5-851b-4ccf-9406-d9e1839faeb1">  
 
-Trial 2: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1
+#### Trial 2: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/16cc56df-a879-4d32-9331-bcafda3de294">  
 
-Trial 3: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1 
+#### Trial 3: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1 
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/8a8ee827-8747-419b-8de1-2e655678df8a">  
 
