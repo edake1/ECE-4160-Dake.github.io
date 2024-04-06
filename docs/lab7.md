@@ -115,6 +115,15 @@ Below are the plots for each trial:
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/6688fd5f-6479-4577-88ba-4bd15df61676">  
 
+
+### Kalman Filter Implementation On Robot 
+After the Kalman Filter sanity check, I proceeded to implement the filter on the robot. See below for plots for each of the trials.  
+
+#### Trial 1  
+
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/540a7580-afe6-4d5b-943e-226fde0f1608">  
+
+
 ### Conclusion
 In conclusion, the implementation and validation of the Kalman filter in this lab have proven to be instrumental in enhancing the accuracy and reliability of our system's measurements. Through meticulous experimentation and fine-tuning of parameters, we have successfully demonstrated the filter's ability to effectively estimate the system's state amidst noise and uncertainty.
 
