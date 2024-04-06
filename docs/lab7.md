@@ -123,7 +123,7 @@ Following successful testing in simulated scenarios, the Kalman filter was integ
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/3b48bb33-8f1a-4bdc-86fa-c4b55ade855c">  
 
-
+[Kalman Filter On Robot](https://youtube.com/shorts/AKbp75emPto?feature=share)
 
 ### Conclusion
 In conclusion, the implementation and validation of the Kalman filter in this lab have proven to be instrumental in enhancing the accuracy and reliability of our system's measurements. Through meticulous experimentation and fine-tuning of parameters, we have successfully demonstrated the filter's ability to effectively estimate the system's state amidst noise and uncertainty.
