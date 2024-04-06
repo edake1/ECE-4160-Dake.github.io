@@ -91,7 +91,7 @@ def error(arr1, arr2):
 ```
 
 ### Kalman Filter Sanity Check 
-Upon completing the Kalman filter implementation, I proceeded to validate its performance within the controlled environment of Jupyter Notebook before deploying it onto the robot. This validation process involved importing time-of-flight (TOF) data collected across three trials and conducting a thorough evaluation.
+Upon completing the Kalman filter implementation, I proceeded to validate its performance within the controlled environment of Jupyter Notebook before deploying it onto the robot. This validation process involved importing time-of-flight (TOF) data collected across four trials and conducting a thorough evaluation.
 
 By plotting the measured TOF data alongside the filter's output against time, I conducted a rigorous assessment of its efficacy. These visualizations provided clear evidence of the filter's capability to accurately estimate the system's state even in the presence of noise and uncertainty.
 
@@ -110,6 +110,10 @@ Below are the plots for each trial:
 #### Trial 3: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1 
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/8a8ee827-8747-419b-8de1-2e655678df8a">  
+
+#### Trial 4: sigma_1 = 40, sigma_2 = 50, sigma_3 = 1  
+
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/6688fd5f-6479-4577-88ba-4bd15df61676">  
 
 ### Conclusion
 In conclusion, the implementation and validation of the Kalman filter in this lab have proven to be instrumental in enhancing the accuracy and reliability of our system's measurements. Through meticulous experimentation and fine-tuning of parameters, we have successfully demonstrated the filter's ability to effectively estimate the system's state amidst noise and uncertainty.
