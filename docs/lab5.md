@@ -152,6 +152,11 @@ The results observed at a Kp value of 0.02 were fairly good but the amplitude of
 Based on the trials, I decided to go with a kp value between 0.015 and 0.017 as the robot was most stable within this range and the perturbations around the setpoint had the least amplitude. These trials did not incorporate the I and D controllers so I incorporated the integral and derivative terms to achieve better results. 
 
 
+### Other labs
+* [LAB 6](lab6.md)
+* [LAB 7](lab7.md)
+* [LAB 8](lab8.md)
+
 
 
 
