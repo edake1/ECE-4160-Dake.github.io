@@ -111,6 +111,11 @@ Below are the plots for each trial:
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/8a8ee827-8747-419b-8de1-2e655678df8a">  
 
+### Conclusion
+In conclusion, the implementation and validation of the Kalman filter in this lab have proven to be instrumental in enhancing the accuracy and reliability of our system's measurements. Through meticulous experimentation and fine-tuning of parameters, we have successfully demonstrated the filter's ability to effectively estimate the system's state amidst noise and uncertainty.
+
+By plotting the refined estimates alongside measured time-of-flight data, we have visually showcased the filter's efficiency in filtering out noise and providing robust state estimation. This not only validates the integrity of our Kalman filter implementation but also underscores its significance in real-world applications.
+
 
 
 
