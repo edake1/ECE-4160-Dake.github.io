@@ -123,6 +123,7 @@ Following successful testing in simulated scenarios, the Kalman filter was integ
 For the on-car Kalman Filter test, I activated both the Kalman Filter and PID control. The car was directed to move straight towards a wall with a setpoint of 305 mm (approximately 1 foot). As the car approached the wall, it gradually decelerated until reaching the setpoint, after which it exhibited minor deviations around the setpoint. Please refer to the accompanying plot and video for visual representation.  
 
 [Kalman Filter On Robot](https://youtube.com/shorts/AKbp75emPto?feature=share)  
+
 For the plot, it can be observed that there was a minor offset between the measured time-of-flight (TOF) sensor readings and the Kalman filter data. However, overall, the Kalman filter closely tracked the sensor readings and effectively smoothed out noise and fluctuations, resulting in a more consistent and accurate representation of the robot's position.
 
 ### Conclusion
