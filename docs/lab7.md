@@ -117,11 +117,12 @@ Below are the plots for each trial:
 
 
 ### Kalman Filter Implementation On Robot 
-After the Kalman Filter sanity check, I proceeded to implement the filter on the robot. See below for plots for each of the trials.  
+Following successful testing in simulated scenarios, the Kalman filter was integrated into the robot's control system. Known for its effectiveness in handling noisy data, the Kalman filter was implemented to improve state estimation in real-world conditions. Subsequent trials were conducted to evaluate its performance, providing valuable insights into its effectiveness in enhancing the robot's capabilities.  
 
 #### Trial 1  
 
-<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/540a7580-afe6-4d5b-943e-226fde0f1608">  
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/3b48bb33-8f1a-4bdc-86fa-c4b55ade855c">  
+
 
 
 ### Conclusion
