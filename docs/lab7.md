@@ -119,12 +119,12 @@ Below are the plots for each trial:
 ### Kalman Filter Implementation On Robot 
 Following successful testing in simulated scenarios, the Kalman filter was integrated into the robot's control system. Known for its effectiveness in handling noisy data, the Kalman filter was implemented to improve state estimation in real-world conditions. Subsequent trials were conducted to evaluate its performance, providing valuable insights into its effectiveness in enhancing the robot's capabilities.  
 
-For the on-car Kalman Filter test, I activated both the Kalman Filter and PID control. The car was directed to move straight towards a wall with a setpoint of 305 mm (approximately 1 foot). As the car approached the wall, it gradually decelerated until reaching the setpoint, after which it exhibited minor deviations around the setpoint. Please refer to the accompanying plot and video for visual representation.  
-
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/3b48bb33-8f1a-4bdc-86fa-c4b55ade855c">  
 
 
-[Kalman Filter On Robot](https://youtube.com/shorts/AKbp75emPto?feature=share)  
+[Kalman Filter On Robot](https://youtube.com/shorts/AKbp75emPto?feature=share) - Video
+
+For the on-car Kalman Filter test, I activated both the Kalman Filter and PID control. The car was directed to move straight towards a wall with a setpoint of 305 mm (approximately 1 foot). As the car approached the wall, it gradually decelerated until reaching the setpoint, after which it exhibited minor deviations around the setpoint. Please refer to the accompanying plot and video above for visual representation. 
 
 For the plot, it can be observed that there was a minor offset between the measured time-of-flight (TOF) sensor readings and the Kalman filter data. However, overall, the Kalman filter closely tracked the sensor readings and effectively smoothed out noise and fluctuations, resulting in a more consistent and accurate representation of the robot's position.
 
