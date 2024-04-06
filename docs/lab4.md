@@ -78,7 +78,11 @@ Knowing this, I tried different PWM pairs. The car only moved straight with PWM 
 <img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/0b90ce02-4c6d-4dfd-9e11-a107b287a355">
 
 
-
+### Other labs
+* [LAB 5](lab5.md)
+* [LAB 6](lab6.md)
+* [LAB 7](lab7.md)
+* [LAB 8](lab8.md)
 
 
 
