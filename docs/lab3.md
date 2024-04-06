@@ -100,3 +100,11 @@ After successfully configuring the two time-of-flight sensors, I initiated their
 I thoroughly enjoyed the lab, although I faced a persistent bug while trying to integrate my time-of-flight sensors into my main ble_arduino.ino file. Initially encountering a HardFault Exception, I used debugging print statements and traced the issue to the <em>distanceSensor.startRanging()</em> method. Half of the problem was resolved, but identifying the cause of the method failure proved challenging. Despite the time-of-flight sensor code functioning in the Example1_ReadDistance file, reviewing every line in my .ino file yielded no solutions. Fortunately, Prof. Jaramillo clarified the address assignment process for time-of-flight sensors, prompting me to reorder the TOF setup commands. By ensuring the first TOF sensor was online before altering its address—unlike my previous code, which skipped this check—I successfully resolved the issue. Debugging my sensors constituted a significant aspect of this lab, providing an enriching learning experience as I delved deeper into troubleshooting and problem-solving methodologies.
 
 
+### Other labs
+* [LAB 4](lab4.md)
+* [LAB 5](lab5.md)
+* [LAB 6](lab6.md)
+* [LAB 7](lab7.md)
+* [LAB 8](lab8.md)
+
+
