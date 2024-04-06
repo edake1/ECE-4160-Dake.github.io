@@ -124,7 +124,13 @@ After testing my RC car, I was impressed by its performance. It responded quickl
 [Car Stunt](https://www.youtube.com/shorts/sbtbLbjgg3Y)  
 
 
-
+### Other labs
+* [LAB 3](lab3.md)
+* [LAB 4](lab4.md)
+* [LAB 5](lab5.md)
+* [LAB 6](lab6.md)
+* [LAB 7](lab7.md)
+* [LAB 8](lab8.md)
 
 
 
