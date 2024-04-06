@@ -154,3 +154,8 @@ I successfully implemented the proportional (P) controller for orientation contr
 
 In contrast, with a Kp value around 4.0, although the robot still slightly undershoots the target orientation by a few degrees, it reaches a stable equilibrium point in considerably less time—typically less than a second. This demonstrates a favorable balance between speed of convergence and precision in orientation control achieved with an optimal Kp value.
 
+
+### Other labs
+* [LAB 7](lab7.md)
+* [LAB 8](lab8.md)
+
