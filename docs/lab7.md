@@ -123,6 +123,7 @@ For the on-car Kalman Filter test, I activated both the Kalman Filter and PID co
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/3b48bb33-8f1a-4bdc-86fa-c4b55ade855c">  
 
+
 [Kalman Filter On Robot](https://youtube.com/shorts/AKbp75emPto?feature=share)  
 
 For the plot, it can be observed that there was a minor offset between the measured time-of-flight (TOF) sensor readings and the Kalman filter data. However, overall, the Kalman filter closely tracked the sensor readings and effectively smoothed out noise and fluctuations, resulting in a more consistent and accurate representation of the robot's position.
