@@ -35,9 +35,10 @@ while ((int) millis() - previousMillis < 10000) {
 }
 break; 
 ```
-[Stunts](https://youtube.com/shorts/R18-SjakcQw?feature=share)
+
 
 ## Other Failed Trials 
+[Wide orientation arc](https://youtube.com/shorts/R18-SjakcQw?feature=share)
 [Messy Orientation](https://youtube.com/shorts/F79bYBJAso0?feature=share)  
 
 ## Successful Attempts  
