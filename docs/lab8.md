@@ -38,12 +38,14 @@ break;
 
 
 ## Other Failed Trials 
-[Wide orientation arc](https://youtube.com/shorts/R18-SjakcQw?feature=share)
+[Wide orientation arc](https://youtube.com/shorts/R18-SjakcQw?feature=share)  
+
 [Messy Orientation](https://youtube.com/shorts/F79bYBJAso0?feature=share)  
 
 ## Successful Attempts  
 
-[Successful Attempt - 1](https://youtube.com/shorts/eXtnkrG7Kmo?feature=share)
+[Successful Attempt - 1](https://youtube.com/shorts/eXtnkrG7Kmo?feature=share)  
+
 [Successful Attempt - 2](https://youtube.com/shorts/LarQ0VJX9j4?feature=share)  
 
 
