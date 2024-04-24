@@ -27,6 +27,7 @@ Bayesian filtering in grid localization is a method for a robot to estimate its 
 
 
 #### Compute_Control()  
+The implementation of this function essentially boils down to computing the odometry model parameters.  
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/cd8744f4-c238-476c-bb14-7fd4f5f7bdb7">  
 
