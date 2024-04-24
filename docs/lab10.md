@@ -117,6 +117,9 @@ def sensor_model(obs):
 ```
 
 #### Update_Step()  
+
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/363456a8-7583-45d6-a8a0-83ebf4ea482d">  
+
 ```
 def update_step():
     """ Update step of the Bayes Filter.
@@ -136,7 +139,6 @@ def update_step():
     #Normalize probabilities to sum to 1
     loc.bel = loc.bel / np.sum(loc.bel)
 ```
-<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/363456a8-7583-45d6-a8a0-83ebf4ea482d">  
 
 
 
