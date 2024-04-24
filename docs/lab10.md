@@ -90,6 +90,39 @@ def odom_motion_model(cur_pose, prev_pose, u):
 ```
 
 #### Prediction_Step()  
+```
+def prediction_step(cur_odom, prev_odom):
+    """ Prediction step of the Bayes Filter.
+    Update the probabilities in loc.bel_bar based on loc.bel from the previous time step and the odometry motion model.
+
+    Args:
+        cur_odom  ([Pose]): Current Pose
+        prev_odom ([Pose]): Previous Pose
+    """
+    X = mapper.MAX_CELLS_X
+    Y = mapper.MAX_CELLS_Y
+    A = mapper.MAX_CELLS_A
+    
+    for x0 in range(X):
+        for y0 in range(Y):
+            for a0 in range(A):
+                # update belief
+                bel = loc.bel[x0][y0][a0]
+                if bel >= 0.0001:
+                    
+                    #Loop through all possible current states
+                    for x1 in range(mapper.MAX_CELLS_X):
+                        for y1 in range(mapper.MAX_CELLS_Y):
+                            for a1 in range(mapper.MAX_CELLS_A):
+                                
+                                #Prediction step
+                                prob = odom_motion_model(mapper.from_map(x1, y1, a1), mapper.from_map(x0, y0, a0), u)
+                                loc.bel_bar[x1][y1][a1] += (prob * bel)
+    # normalize bel_bar 
+    loc.bel_bar = loc.bel_bar / (np.sum(loc.bel_bar))
+```
+
+
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/67e362c2-cf51-4a3b-8b36-0bd68f4ae7a1">  
 
