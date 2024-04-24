@@ -88,6 +88,8 @@ def odom_motion_model(cur_pose, prev_pose, u):
 
 #### Prediction_Step()  
 
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/67e362c2-cf51-4a3b-8b36-0bd68f4ae7a1">  
+
 
 
 #### Sensor_Model()  
@@ -111,5 +113,9 @@ def sensor_model(obs):
 
 ```
 
-#### Update_Step()
+#### Update_Step()  
+
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/363456a8-7583-45d6-a8a0-83ebf4ea482d">  
+
+
 
