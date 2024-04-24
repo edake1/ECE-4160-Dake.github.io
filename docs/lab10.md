@@ -21,8 +21,12 @@ Bayesian filtering in grid localization is a method for a robot to estimate its 
 * sensor_model(obs)
 * update_step()
 
+### Implementation of Bayes Filter  
 
-### Compute_Control()  
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/b4b933b9-6624-4157-8e0e-019351d1e8b2">  
+
+
+#### Compute_Control()  
 
 ```
 def compute_control(cur_pose, prev_pose):
@@ -57,7 +61,7 @@ def compute_control(cur_pose, prev_pose):
 ```
 
 
-### Odom_Motion_Model()  
+#### Odom_Motion_Model()  
 
 ```
 def odom_motion_model(cur_pose, prev_pose, u):
@@ -82,11 +86,11 @@ def odom_motion_model(cur_pose, prev_pose, u):
     return prob
 ```
 
-### Prediction_Step()  
+#### Prediction_Step()  
 
 
 
-### Sensor_Model()  
+#### Sensor_Model()  
 
 ```
 def sensor_model(obs):
@@ -107,5 +111,5 @@ def sensor_model(obs):
 
 ```
 
-### Update_Step()
+#### Update_Step()
 
