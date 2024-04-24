@@ -49,5 +49,6 @@ if (mapping && yaw < 360.0){   // type(mapping) = bool. Toggled to begin taking 
 
 
 
-
+### Other labs
+* [LAB 10](lab10.md)
 
