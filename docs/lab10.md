@@ -117,7 +117,25 @@ def sensor_model(obs):
 ```
 
 #### Update_Step()  
-
+```
+def update_step():
+    """ Update step of the Bayes Filter.
+    Update the probabilities in loc.bel based on loc.bel_bar and the sensor model.
+    """
+    X = mapper.MAX_CELLS_X
+    Y = mapper.MAX_CELLS_Y
+    A = mapper.MAX_CELLS_A
+    
+    #Loop through all possible grid cell positions
+    for x in range(X):
+        for y in range(Y):
+            for a in range(A):
+                prob_z = np.prod(sensor_model(mapper.get_views(x, y, a)))
+                loc.bel[x][y][a] = prob_z * loc.bel_bar[x][y][a]
+    
+    #Normalize probabilities to sum to 1
+    loc.bel = loc.bel / np.sum(loc.bel)
+```
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/363456a8-7583-45d6-a8a0-83ebf4ea482d">  
 
 
