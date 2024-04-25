@@ -93,6 +93,8 @@ def odom_motion_model(cur_pose, prev_pose, u):
 #### Prediction_Step()  
 For the prediction step, we are essentially computing the predicted probability distribution over possible robot poses in the grid map using the odometry model. At this step, we iterate over all possible poses in the grid map and calculate the likelihood of transitioning from the previous pose to each possible current pose using the odometry motion model (<em>odom_motion_model()</em> is used here). Then, the belief state is updated by integrating these transition probabilities with the prior beliefs for each pose.
 
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/67e362c2-cf51-4a3b-8b36-0bd68f4ae7a1">  
+
 See below for implementation of the <em>prediction_step()</em> function. 
 
 ```
@@ -126,10 +128,7 @@ def prediction_step(cur_odom, prev_odom):
                                 loc.bel_bar[x1][y1][a1] += (prob * bel)
     # normalize bel_bar 
     loc.bel_bar = loc.bel_bar / (np.sum(loc.bel_bar))
-```
-
-
-<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/67e362c2-cf51-4a3b-8b36-0bd68f4ae7a1">  
+``` 
 
 
 #### Sensor_Model()  
@@ -187,20 +186,20 @@ Using the helper functions implemented above, I ran my Bayes Filter implementati
 * Green  - Ground Truth
 * Blue   - Belief of the robot. 
 
-[Bayes Filter in simulator - Trial 1](https://youtu.be/siIbx5HlpbA)
+* [Bayes Filter in simulator - Trial 1](https://youtu.be/siIbx5HlpbA)
 
-[Bayes Filter in simulator - Trial 2](https://youtu.be/cQ0Zh27hDAo)    
+* [Bayes Filter in simulator - Trial 2](https://youtu.be/cQ0Zh27hDAo)
 
-[Bayes Filter in simulator - Trial 3](https://youtu.be/_nSl0o0BFZk)  
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/28c4f55f-d0a5-403f-845b-a836114b3fe6">  
 
-[Bayes Filter in simulator - Trial 4](https://youtu.be/R_IEVoPMgbQ)    
+* [Bayes Filter in simulator - Trial 3](https://youtu.be/_nSl0o0BFZk)
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5958528b-6807-4894-9091-9df4054a6153">
 
-[Bayes Filter in simulator - Trial 5](https://youtu.be/cnOzNVUGqVs)  
-
-<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/28c4f55f-d0a5-403f-845b-a836114b3fe6">
-<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5958528b-6807-4894-9091-9df4054a6153">  
+* [Bayes Filter in simulator - Trial 4](https://youtu.be/R_IEVoPMgbQ)
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/414c5480-f55c-4c4d-96a6-ff35b4afd919">
-<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/a99a0b54-85a2-43bd-a0c0-3caf72ddd6dd">  
+
+* [Bayes Filter in simulator - Trial 5](https://youtu.be/cnOzNVUGqVs)
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/a99a0b54-85a2-43bd-a0c0-3caf72ddd6dd">
 
 #### Conclusion
 From the results of running the Bayes Filter in the simulator, it is observed that the ground truth and the belief of the robot are fairly consistent throughout. This consistency indicates the efficacy of our implemented Bayes Filter in accurately localizing the robot within the environment.
