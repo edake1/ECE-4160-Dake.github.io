@@ -53,7 +53,7 @@ def compute_control(cur_pose, prev_pose):
     # compute delta_rot_2
     delta_rot_2 = cur_pose[2] - prev_pose[2] - delta_rot_1
     # normalize delta_rot_2
-    delta_rot_2 = mapper.normalize(delta_rot_2)
+    delta_rot_2 = mapper.normalize_angle(delta_rot_2)
 
     delta_trans = np.sqrt((cur_pose[1] - prev_pose[1]) ** 2 + (cur_pose[0] - prev_pose[1]) ** 2)
     
@@ -178,6 +178,22 @@ def update_step():
     #Normalize probabilities to sum to 1
     loc.bel = loc.bel / np.sum(loc.bel)
 ```
+
+### Running Bayes Filter in Simulator 
+Using the helper functions implemented above, I ran my Bayes Filter implementation in the simulator. 
+
+#### Simulator plotter color codes
+* Red    - Odometry data
+* Green  - Ground Truth
+* Blue   - Belief of the robot. 
+
+[Bayes Filter in simulator](https://youtu.be/siIbx5HlpbA)
+
+[Bayes Filter in simulator - user confirmation between iterations]()
+
+
+
+
 
 
 
