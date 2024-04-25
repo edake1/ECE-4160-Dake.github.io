@@ -65,6 +65,7 @@ def compute_control(cur_pose, prev_pose):
 
 
 #### Odom_Motion_Model()  
+The odometry motion model step assesses the likelihood of the robot transitioning from its prior position to its current one based on received control inputs. It factors in the uncertainties inherent in these movements, accounting for rotational and translational noise, which are modeled using Gaussian distributions in the implementation.
 
 ```
 def odom_motion_model(cur_pose, prev_pose, u):
@@ -90,7 +91,7 @@ def odom_motion_model(cur_pose, prev_pose, u):
 ```
 
 #### Prediction_Step()  
-For the prediction step, we are essentially computing the predicted probability distribution over possible robot poses in the grid map using the odometry model. At this step, we iterate over all possible poses in the grid map and calculate the likelihood of transitioning from the previous pose to each possible current pose using the odometry motion model (<em>odom_motion_model() is used here). Then, the belief state is updated by integrating these transition probabilities with the prior beliefs for each pose.
+For the prediction step, we are essentially computing the predicted probability distribution over possible robot poses in the grid map using the odometry model. At this step, we iterate over all possible poses in the grid map and calculate the likelihood of transitioning from the previous pose to each possible current pose using the odometry motion model (<em>odom_motion_model()</em> is used here). Then, the belief state is updated by integrating these transition probabilities with the prior beliefs for each pose.
 
 See below for implementation of the <em>prediction_step()</em> function. 
 
