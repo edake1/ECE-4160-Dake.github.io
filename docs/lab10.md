@@ -189,7 +189,12 @@ Using the helper functions implemented above, I ran my Bayes Filter implementati
 
 [Bayes Filter in simulator](https://youtu.be/siIbx5HlpbA)
 
-[Bayes Filter in simulator - user confirmation between iterations]()
+[Bayes Filter in simulator - user confirmation between iterations]()  
+
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5958528b-6807-4894-9091-9df4054a6153">  
+
+
+
 
 
 
