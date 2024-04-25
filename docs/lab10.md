@@ -90,6 +90,10 @@ def odom_motion_model(cur_pose, prev_pose, u):
 ```
 
 #### Prediction_Step()  
+For the prediction step, we are essentially computing the predicted probability distribution over possible robot poses in the grid map using the odometry model. At this step, we iterate over all possible poses in the grid map and calculate the likelihood of transitioning from the previous pose to each possible current pose using the odometry motion model (<em>odom_motion_model() is used here). Then, the belief state is updated by integrating these transition probabilities with the prior beliefs for each pose.
+
+See below for implementation of the <em>prediction_step()</em> function. 
+
 ```
 def prediction_step(cur_odom, prev_odom):
     """ Prediction step of the Bayes Filter.
@@ -99,6 +103,7 @@ def prediction_step(cur_odom, prev_odom):
         cur_odom  ([Pose]): Current Pose
         prev_odom ([Pose]): Previous Pose
     """
+    # initialize values for max grid dimensions
     X = mapper.MAX_CELLS_X
     Y = mapper.MAX_CELLS_Y
     A = mapper.MAX_CELLS_A
@@ -123,12 +128,11 @@ def prediction_step(cur_odom, prev_odom):
 ```
 
 
-
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/67e362c2-cf51-4a3b-8b36-0bd68f4ae7a1">  
 
 
-
 #### Sensor_Model()  
+The sensor model step evaluates how likely it is to observe specific sensor measurements given a particular robot pose. This assessment is fundamental for updating the belief state in the Bayes filter, as it helps determine the contribution of sensor data to refining the robot's estimated pose.
 
 ```
 def sensor_model(obs):
@@ -150,6 +154,7 @@ def sensor_model(obs):
 ```
 
 #### Update_Step()  
+The update step refines the robot's belief about its pose by incorporating sensor measurements. It calculates the likelihood of observing the sensor data for each possible pose using the sensor model. Then, it updates the belief state by combining these likelihoods with the prior beliefs for each pose.  
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/363456a8-7583-45d6-a8a0-83ebf4ea482d">  
 
