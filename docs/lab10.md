@@ -193,8 +193,21 @@ Using the helper functions implemented above, I ran my Bayes Filter implementati
 
 [Bayes Filter in simulator - Trial 3](https://youtu.be/_nSl0o0BFZk)  
 
+[Bayes Filter in simulator - Trial 4](https://youtu.be/R_IEVoPMgbQ)    
+
+[Bayes Filter in simulator - Trial 5](https://youtu.be/cnOzNVUGqVs)  
+
 <img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/28c4f55f-d0a5-403f-845b-a836114b3fe6">
-<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5958528b-6807-4894-9091-9df4054a6153">
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5958528b-6807-4894-9091-9df4054a6153">  
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/414c5480-f55c-4c4d-96a6-ff35b4afd919">
+<img width="400" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/a99a0b54-85a2-43bd-a0c0-3caf72ddd6dd">  
+
+#### Conclusion
+From the results of running the Bayes Filter in the simulator, it is observed that the ground truth and the belief of the robot are fairly consistent throughout. This consistency indicates the efficacy of our implemented Bayes Filter in accurately localizing the robot within the environment.
+
+
+
+
 
 
 
