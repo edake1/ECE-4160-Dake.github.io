@@ -187,12 +187,14 @@ Using the helper functions implemented above, I ran my Bayes Filter implementati
 * Green  - Ground Truth
 * Blue   - Belief of the robot. 
 
-[Bayes Filter in simulator](https://youtu.be/siIbx5HlpbA)
+[Bayes Filter in simulator - Trial 1](https://youtu.be/siIbx5HlpbA)
 
-[Bayes Filter in simulator - user confirmation between iterations]()  
+[Bayes Filter in simulator - Trial 2](https://youtu.be/cQ0Zh27hDAo)    
 
-<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5958528b-6807-4894-9091-9df4054a6153">  
+[Bayes Filter in simulator - Trial 3](https://youtu.be/_nSl0o0BFZk)  
 
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/28c4f55f-d0a5-403f-845b-a836114b3fe6"> 
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/5958528b-6807-4894-9091-9df4054a6153">
 
 
 
