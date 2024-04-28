@@ -47,6 +47,40 @@ if (mapping && yaw < 360.0){   // type(mapping) = bool. Toggled to begin taking 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/a9dac414-9243-4e6f-8824-df13e757c74e">  
 
 
+#### Generating Global Map 
+From the plotted regions depicted above, it's apparent that each individual map appears to be shifted by approximately 45°. This discrepancy was unforeseen, given that precautions were taken during data collection to prevent such offsets. Nevertheless, we can realign the data points and assemble the individual maps to reconstruct the global map.
+
+##### Transforming datapoints to global map 
+Each of the aggregated data points resides within its respective local space, necessitating a transformation process to integrate them into the global map. Below, you'll find the function employed for precisely this purpose.  
+
+```
+def transform_data4(dict_data):
+  new_all_data = []
+  for key, value in dict_data.items(): # key = (x, y), value = array of array datapoints
+    x, y = key # center coordinates 
+    result = []
+    for angle, tof in value:
+      # Transformation matrix
+      TMatrix = np.array([[np.cos(radians(angle)), -np.sin(radians(angle)), x], 
+                          [np.sin(radians(angle)), np.cos(radians(angle)), y], 
+                          [0, 0, 1]])
+      # matrix to transform 
+      val = np.array([[tof], 
+                      [0],
+                      [0]])
+      data = np.matmul(TMatrix, val)
+      result.append(data)
+    new_all_data.append(data)
+return new_all_data
+
+```
+
+Upon transforming all the points, the global map was derived. However, even after the initial attempt at transformation, the map remained misaligned, as illustrated below.
+
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/849c02b5-0dae-489f-ac35-dd9a0cf786ba">  
+
+Given the inaccuracies present in the map, it became imperative to diagnose the underlying issue, meticulously reassemble the points, and subsequently derive a significantly more precise map.
+
 
 
 ### Other labs
