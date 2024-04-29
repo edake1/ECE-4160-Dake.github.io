@@ -81,7 +81,9 @@ Upon transforming all the points, the global map was derived. However, even afte
 
 Given the inaccuracies present in the map, it became imperative to diagnose the underlying issue, meticulously reassemble the points, and subsequently derive a significantly more precise map.
 
+Upon observation, I attempted to align all the points by rotating them. However, it became apparent that the issue persisted even after rotation, suggesting that the problem might stem from erroneous central coordinates used for plotting.  
 
+<img width="500" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/4f2a5250-3775-4635-a5c0-acbace1f72cc">  
 
 ### Other labs
 * [LAB 10](lab10.md)
