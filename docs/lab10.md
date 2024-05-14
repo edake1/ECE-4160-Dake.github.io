@@ -205,7 +205,9 @@ Using the helper functions implemented above, I ran my Bayes Filter implementati
 From the results of running the Bayes Filter in the simulator, it is observed that the ground truth and the belief of the robot are fairly consistent throughout. This consistency indicates the efficacy of our implemented Bayes Filter in accurately localizing the robot within the environment.
 
 
-
+#### Other labs
+* [LAB 11](lab11.md)
+* [LAB 12](lab12.md)
 
 
 
