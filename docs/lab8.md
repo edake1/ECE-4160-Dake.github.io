@@ -55,3 +55,6 @@ break;
 
 ### Other labs
 * [LAB 9](lab9.md)
+* [LAB 10](lab10.md)
+* [LAB 11](lab11.md)
+* [LAB 12](lab12.md)
