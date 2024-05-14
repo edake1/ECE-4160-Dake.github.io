@@ -137,6 +137,10 @@ By plotting the refined estimates alongside measured time-of-flight data, we hav
 
 ### Other labs
 * [LAB 8](lab8.md)
+* [LAB 9](lab9.md)
+* [LAB 10](lab10.md)
+* [LAB 11](lab11.md)
+* [LAB 12](lab12.md)
 
 
 
