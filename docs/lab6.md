@@ -158,4 +158,8 @@ In contrast, with a Kp value around 4.0, although the robot still slightly under
 ### Other labs
 * [LAB 7](lab7.md)
 * [LAB 8](lab8.md)
+* [LAB 9](lab9.md)
+* [LAB 10](lab10.md)
+* [LAB 11](lab11.md)
+* [LAB 12](lab12.md)
 
