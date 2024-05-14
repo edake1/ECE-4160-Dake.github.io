@@ -87,4 +87,6 @@ Upon observation, I attempted to align all the points by rotating them. However,
 
 ### Other labs
 * [LAB 10](lab10.md)
+* [LAB 11](lab11.md)
+* [LAB 12](lab12.md)
 
