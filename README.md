@@ -221,6 +221,10 @@ Working on this lab has been both enjoyable and enlightening. While navigating t
 * [LAB 8](docs/lab8.md)
 * [LAB 9](docs/lab9.md)
 * [LAB 10](docs/lab10.md)
+* [LAB 11](docs/lab11.md)
+* [LAB 12](docs/lab12.md)
+
+
 
 
  
