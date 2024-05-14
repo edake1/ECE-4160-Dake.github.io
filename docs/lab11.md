@@ -1,5 +1,6 @@
 
 # Localization on the real robot
+In this lab, our objective is to implement localization using the Bayes filter on your physical robot. The primary goal is to grasp the distinctions between simulation and real-world systems. 
 
 ## Simulation 
 ### Final plot after running simulation  
