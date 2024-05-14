@@ -156,6 +156,10 @@ Based on the trials, I decided to go with a kp value between 0.015 and 0.017 as 
 * [LAB 6](lab6.md)
 * [LAB 7](lab7.md)
 * [LAB 8](lab8.md)
+* [LAB 9](lab9.md)
+* [LAB 10](lab10.md)
+* [LAB 11](lab11.md)
+* [LAB 12](lab12.md)
 
 
 
