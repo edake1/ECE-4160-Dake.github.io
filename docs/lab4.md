@@ -83,6 +83,10 @@ Knowing this, I tried different PWM pairs. The car only moved straight with PWM 
 * [LAB 6](lab6.md)
 * [LAB 7](lab7.md)
 * [LAB 8](lab8.md)
+* [LAB 9](lab9.md)
+* [LAB 10](lab10.md)
+* [LAB 11](lab11.md)
+* [LAB 12](lab12.md)
 
 
 
