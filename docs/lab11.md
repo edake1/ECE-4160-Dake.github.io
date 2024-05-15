@@ -39,6 +39,12 @@ def perform_observation_loop(self, rot_vel=120):
   return sensor_ranges, sensor_bearings
 ```
 
+### (0ft, 3ft)  
+
+<img width="700" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/e6ff5265-5eae-43c3-9ceb-ca75022b8104">  
+
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/9af347c6-d805-444c-bb43-4a423baab7c2">  
+
 
 ### (5ft, 3ft)
 <img width="700" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/6b0818b2-2dc6-42f5-b43d-ab3410902136">  
@@ -46,5 +52,6 @@ def perform_observation_loop(self, rot_vel=120):
 ### (5ft, -3ft) 
 <img width="700" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/671c12d0-52cb-4576-90f8-83614973a099">  
 
-<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1db36eb4-3395-441a-b994-b37661faebc5">
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/1db36eb4-3395-441a-b994-b37661faebc5">  
+
 
