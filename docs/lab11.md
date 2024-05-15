@@ -45,6 +45,11 @@ def perform_observation_loop(self, rot_vel=120):
 
 <img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/9af347c6-d805-444c-bb43-4a423baab7c2">  
 
+### (-3ft, -2ft)  
+<img width="700" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/324a02c0-4c52-4570-9ded-c63eeef22001">  
+
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/f769b41b-91c6-4795-b199-476ca75ff9e5">
+
 
 ### (5ft, 3ft)
 <img width="700" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/6b0818b2-2dc6-42f5-b43d-ab3410902136">  
