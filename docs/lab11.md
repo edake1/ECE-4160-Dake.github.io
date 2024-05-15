@@ -56,4 +56,5 @@ The remaining waypoints were localized in a similar manner, showing a consistent
 ### (5ft, -3ft, 0°)  
 <img width="700" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/671c12d0-52cb-4576-90f8-83614973a099">  
 
+In conclusion, the localization at all four marked poses was fairly consistent, with the robot's belief closely tracking the ground truth at each pose. However, despite multiple attempts, perfect localization (where the ground truth exactly matches the robot's belief) was not achieved. The plots above represent the best results from several localization trials at each pose.
 
