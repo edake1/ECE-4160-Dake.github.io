@@ -107,3 +107,5 @@ def traverse():
     time.sleep(4)
 ```
 
+#### Conclusion (after trajectory execution trials)
+Upon executing the trajectory execution code on the robot, it became evident that the traversal commands were moderately accurate but lacked precision. Numerous instances of undershooting and overshooting occurred during movement between waypoints. Leveraging the flexibility of my code, I iteratively refined and retested it on the robot without requiring reuploading onto the Artemis platform. Consequently, I conducted over 60 trials for trajectory execution, with the showcased trial representing the most optimal outcome. Even in the most successful trial, I had to manually intervene by nudging the robot to ensure completion of specific sequences.
