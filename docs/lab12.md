@@ -23,9 +23,6 @@ See the photo below for a diagram of the map showing the waypoints and the ideal
 ### Initial (ideal) plan
 The initial plan involved utilizing PID control functionality in conjunction with orientation control commands to facilitate the robot's navigation between predefined waypoints. These waypoints, located within a gridded area outside the lab, were demarcated with defined coordinates (see waypoint coordinates above). Prior to implementation, I conducted precise geometric calculations to determine inter-waypoint distances (made easier by the fact that each tile in the grid was about one foot in width and length). The intended approach was to initiate the robot's movement from the first waypoint, utilizing PID control to navigate towards subsequent waypoints while employing orientation control for precise turns. Incorporating PID control enabled the robot to perform necessary backup and repositioning maneuvers in cases of overshooting or undershooting the intended distance.  
 
-[![Traversing Waypoints - Video](https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg)](https://www.youtube.com/watch?v=FUfWmMVqh1M)
-
-
 <!--
 <div style="text-align: center;">
   <a href="https://www.youtube.com/watch?v=FUfWmMVqh1M" target="_blank">
@@ -40,5 +37,9 @@ My codebase suddenly exhibited unexpected behavior, causing all commands to hang
 #### Revised path traversal plan 
 After extensive tweaking, I repurposed my PID control function and streamlined my code by consolidating it into the main loop - I suspected that the code might be hanging during case command execution. The modified PID control function accepts a distance, and directs the robot to move forward or backward by the given distance (with very little correction so distances have to be precise). With this adjustment, I can now program the robot to navigate between waypoints by providing the distances needed to reach each destination. 
 
+### Executing trajectory 
+For executing the trajectory as shown in the picture above [Grid(map) with marked waypoints](#gridmap-with-marked-waypoints)
+
+[![Traversing Waypoints - Video](https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg)](https://www.youtube.com/watch?v=FUfWmMVqh1M)
 
 
