@@ -26,13 +26,11 @@ The initial plan involved utilizing PID control functionality in conjunction wit
 [![Traversing Waypoints - Video](https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg)](https://www.youtube.com/watch?v=FUfWmMVqh1M)
 
 
-
-
 <div style="text-align: center;">
   <a href="https://www.youtube.com/watch?v=FUfWmMVqh1M" target="_blank">
-  <img src="https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg" alt="Watch the video" width="320" height="180">
+  <img src="https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg" alt="Watch the video" width="500" height="500">
 </a>
-  <p>Click the image above to watch the video on YouTube.</p>
+  <p><em>Traversing Waypoints - Video</em></p>
 </div>
 
 ### Executing path traversal
