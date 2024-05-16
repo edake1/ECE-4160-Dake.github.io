@@ -40,8 +40,9 @@ After extensive tweaking, I repurposed my PID control function and streamlined m
 ### Executing trajectory 
 To execute the trajectory depicted in the image above (see [Grid with waypoints](#gridmap-with-marked-waypoints) section), a systematic approach is required. With nine distinct waypoints in the image, our trajectory execution algorithm is organized into nine precise steps, each aligned with a specific waypoint. At every step, the robot adheres to a customized sequence of commands designed to advance towards the subsequent waypoint. Key functions for forward and backward motion, derived from our PID control function, alongside orientation control, are indispensable components guiding this process.
 
-[![Traversing Waypoints - Video](https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg)](https://www.youtube.com/watch?v=FUfWmMVqh1M)
+[![Traversing Waypoints - Video](https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg)](https://www.youtube.com/watch?v=FUfWmMVqh1M)  
 
+<em>See path traversal code below</em>
 ```
 def move_forward(distance):
     command_string = f"|{distance}|3.10|0.01|0.02|"
