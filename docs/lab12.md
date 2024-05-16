@@ -25,6 +25,11 @@ The initial plan involved utilizing PID control functionality in conjunction wit
 
 [![Traversing Waypoints - Video](https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg)](https://www.youtube.com/watch?v=FUfWmMVqh1M)
 
+
+<a href="https://www.youtube.com/watch?v=FUfWmMVqh1M" target="_blank">
+  <img src="https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg" alt="Watch the video" width="320" height="180">
+</a>
+
 ### Executing path traversal
 My codebase suddenly exhibited unexpected behavior, causing all commands to hang midway through execution and resulting in Artemis disconnections, either during or immediately after command execution. This issue rendered my initial PID control function ineffective. Despite extensive troubleshooting efforts, including removing non-PID control code, rewriting the entire codebase within a given .ino file, meticulously reviewing each line of code, and eliminating unnecessary array instantiations that may be consuming memory, the problem persisted.
 
