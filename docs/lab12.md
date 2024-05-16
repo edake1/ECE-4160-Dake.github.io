@@ -25,8 +25,13 @@ The initial plan involved utilizing PID control functionality in conjunction wit
 
 [Traversing Waypoints - Video](https://youtu.be/FUfWmMVqh1M)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FUfWmMVqh1M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ### Executing path traversal
 My codebase suddenly exhibited unexpected behavior, causing all commands to hang midway through execution and resulting in Artemis disconnections, either during or immediately after command execution. This issue rendered my initial PID control function ineffective. Despite extensive troubleshooting efforts, including removing non-PID control code, rewriting the entire codebase within a given .ino file, meticulously reviewing each line of code, and eliminating unnecessary array instantiations that may be consuming memory, the problem persisted.
 
 #### Revised path traversal plan 
 After extensive tweaking, I repurposed my PID control function and streamlined my code by consolidating it into the main loop - I suspected that the code might be hanging during case command execution. The modified PID control function accepts a distance, and directs the robot to move forward or backward by the given distance (with very little correction so distances have to be precise). With this adjustment, I can now program the robot to navigate between waypoints by providing the distances needed to reach each destination. 
+
+
+
