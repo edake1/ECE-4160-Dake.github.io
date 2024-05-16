@@ -38,8 +38,71 @@ My codebase suddenly exhibited unexpected behavior, causing all commands to hang
 After extensive tweaking, I repurposed my PID control function and streamlined my code by consolidating it into the main loop - I suspected that the code might be hanging during case command execution. The modified PID control function accepts a distance, and directs the robot to move forward or backward by the given distance (with very little correction so distances have to be precise). With this adjustment, I can now program the robot to navigate between waypoints by providing the distances needed to reach each destination. 
 
 ### Executing trajectory 
-For executing the trajectory as shown in the picture above [Grid(map) with marked waypoints](#gridmap-with-marked-waypoints)
+To execute the trajectory depicted in the image above (see [Grid with waypoints](#gridmap-with-marked-waypoints) section), a systematic approach is required. With nine distinct waypoints in the image, our trajectory execution algorithm is organized into nine precise steps, each aligned with a specific waypoint. At every step, the robot adheres to a customized sequence of commands designed to advance towards the subsequent waypoint. Key functions for forward and backward motion, derived from our PID control function, alongside orientation control, are indispensable components guiding this process.
 
 [![Traversing Waypoints - Video](https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg)](https://www.youtube.com/watch?v=FUfWmMVqh1M)
 
+```
+def move_forward(distance):
+    command_string = f"|{distance}|3.10|0.01|0.02|"
+    ble.send_command(CMD.PLANNING, command_string)
+
+def make_turn(turn_angle, direction):
+    move_direction = 1 # left
+    if direction.lower() == "right": 
+        move_direction = 2 
+    command_string = f"|3.0|0.06|0.02|{turn_angle}|{move_direction}|" 
+    ble.send_command(CMD.ORIENTATION_MOVEMENT, command_string)
+
+def traverse():
+    # waypoint 1: (-4, -3)
+    move_forward(trajectory_distances[to_intermediate_wp])
+    time.sleep(2)
+
+    # intermediate waypoint (unlisted): (-2, -3) 
+    make_turn(90, "left")
+    time.sleep(4)
+    move_forward(trajectory_distances[to_waypoint_2])
+    time.sleep(4)
+
+    # waypoint 2: (-2, -1) 
+    make_turn(90, "right")
+    time.sleep(4)
+    move_forward(trajectory_distances[to_waypoint_3])
+    time.sleep(4)
+
+    # waypoint 3: (1, -1)
+    make_turn(60, "right")
+    time.sleep(4)
+    move_forward(trajectory_distances[to_waypoint_4])
+    time.sleep(4)
+
+    # waypoint 4: (2, -3)
+    make_turn(60, "left")
+    time.sleep(4)
+    move_forward(trajectory_distances[to_waypoint_5])
+    time.sleep(4)
+
+    # waypoint 5: (5, -3)
+    make_turn(90, "left")
+    time.sleep(4)
+    move_forward(trajectory_distances[to_waypoint_6])
+    time.sleep(4)
+
+    # waypoint 6: (5, -2)
+    move_forward(trajectory_distances[to_waypoint_7])
+    time.sleep(4)
+
+    # waypoint 7: (5, 3)
+    make_turn(90, "left")
+    time.sleep(4)
+    move_forward(trajectory_distances[to_waypoint_8])
+    time.sleep(4)
+
+    # waypoint 8: (0, 3)
+    make_turn(90, "left")
+    time.sleep(4)
+    move_forward(trajectory_distances[to_waypoint_9]) # ends at origin: (0, 0)
+    time.sleep(4)
+```
 
