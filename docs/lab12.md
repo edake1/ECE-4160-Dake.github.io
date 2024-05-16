@@ -23,13 +23,7 @@ See the photo below for a diagram of the map showing the waypoints and the ideal
 ### Initial (ideal) plan
 The initial plan involved utilizing PID control functionality in conjunction with orientation control commands to facilitate the robot's navigation between predefined waypoints. These waypoints, located within a gridded area outside the lab, were demarcated with defined coordinates (see waypoint coordinates above). Prior to implementation, I conducted precise geometric calculations to determine inter-waypoint distances (made easier by the fact that each tile in the grid was about one foot in width and length). The intended approach was to initiate the robot's movement from the first waypoint, utilizing PID control to navigate towards subsequent waypoints while employing orientation control for precise turns. Incorporating PID control enabled the robot to perform necessary backup and repositioning maneuvers in cases of overshooting or undershooting the intended distance.  
 
-[Traversing Waypoints - Video](https://youtu.be/FUfWmMVqh1M)
-
-
-[![Watch the video](https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg)](https://www.youtube.com/watch?v=FUfWmMVqh1M)
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FUfWmMVqh1M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Traversing Waypoints - Video](https://img.youtube.com/vi/FUfWmMVqh1M/0.jpg)](https://www.youtube.com/watch?v=FUfWmMVqh1M)
 
 ### Executing path traversal
 My codebase suddenly exhibited unexpected behavior, causing all commands to hang midway through execution and resulting in Artemis disconnections, either during or immediately after command execution. This issue rendered my initial PID control function ineffective. Despite extensive troubleshooting efforts, including removing non-PID control code, rewriting the entire codebase within a given .ino file, meticulously reviewing each line of code, and eliminating unnecessary array instantiations that may be consuming memory, the problem persisted.
