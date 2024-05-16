@@ -15,7 +15,10 @@ A total of 9 distinct waypoints were scattered across the entire map, each with 
 8. (0, 3)
 9. (0, 0)      <--end
 
-<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/69a18795-ff30-4d3d-91e5-cb7b311374f6">
+### Grid(map) with marked waypoints
+See the photo below for a diagram of the map showing the waypoints and the ideal trajectory for inter-waypoint traversal.  
+
+<img width="600" alt="image" src="https://github.com/edake1/ECE-4160-Dake.github.io/assets/74028493/69a18795-ff30-4d3d-91e5-cb7b311374f6">  
 
 ### Initial (ideal) plan
 The initial plan involved utilizing PID control functionality in conjunction with orientation control commands to facilitate the robot's navigation between predefined waypoints. These waypoints, located within a gridded area outside the lab, were demarcated with defined coordinates (see waypoint coordinates above). Prior to implementation, I conducted precise geometric calculations to determine inter-waypoint distances (made easier by the fact that each tile in the grid was about one foot in width and length). The intended approach was to initiate the robot's movement from the first waypoint, utilizing PID control to navigate towards subsequent waypoints while employing orientation control for precise turns. Incorporating PID control enabled the robot to perform necessary backup and repositioning maneuvers in cases of overshooting or undershooting the intended distance.  
