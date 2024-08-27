@@ -212,17 +212,17 @@ On the Artemis side, we have the <em>ble_arduino.ino</em> file which contains al
 Working on this lab has been both enjoyable and enlightening. While navigating the code base posed initial challenges in understanding the functionality of each segment, referring to the lab instructions effectively addressed many of the encountered issues (i.e. the serial monitor displaying gibberish because of a low baud rate). Diligent reading of the lab manual proved invaluable. As much of the lab's content was novel to me, it served as a rich source of learning experiences. I found exploring BLE and the data exchange between the computer and the Artemis board particularly engaging. 
 
 ### Other Labs  
-* [LAB 2](docs/lab2.md)  
-* [LAB 3](docs/lab3.md)
-* [LAB 4](docs/lab4.md)
-* [LAB 5](docs/lab5.md)
-* [LAB 6](docs/lab6.md)
-* [LAB 7](docs/lab7.md)
-* [LAB 8](docs/lab8.md)
-* [LAB 9](docs/lab9.md)
-* [LAB 10](docs/lab10.md)
-* [LAB 11](docs/lab11.md)
-* [LAB 12](docs/lab12.md)
+* [LAB 2 - IMU](docs/lab2.md)  
+* [LAB 3 - Time-of-flight Sensors](docs/lab3.md)
+* [LAB 4 - Motors and Open Loop Control](docs/lab4.md)
+* [LAB 5 - Linear PID control and Linear interpolation](docs/lab5.md)
+* [LAB 6 - Orientation Control](docs/lab6.md)
+* [LAB 7 - Kalman Filter](docs/lab7.md)
+* [LAB 8 - Stunts](docs/lab8.md)
+* [LAB 9 - Mapping](docs/lab9.md)
+* [LAB 10 - Grid Localization using Bayes Filter](docs/lab10.md)
+* [LAB 11 - Localization on the real robot](docs/lab11.md)
+* [LAB 12 - Path Planning and Execution](docs/lab12.md)
 
 
 
