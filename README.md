@@ -223,8 +223,4 @@ Working on this lab has been both enjoyable and enlightening. While navigating t
 * [LAB 10 - Grid Localization using Bayes Filter](docs/lab10.md)
 * [LAB 11 - Localization on the real robot](docs/lab11.md)
 * [LAB 12 - Path Planning and Execution](docs/lab12.md)
-
-
-
-
  
