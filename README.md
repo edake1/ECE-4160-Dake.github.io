@@ -1,3 +1,16 @@
+# All Labs 
+* [LAB 2 - IMU](docs/lab2.md)  
+* [LAB 3 - Time-of-flight Sensors](docs/lab3.md)
+* [LAB 4 - Motors and Open Loop Control](docs/lab4.md)
+* [LAB 5 - Linear PID control and Linear interpolation](docs/lab5.md)
+* [LAB 6 - Orientation Control](docs/lab6.md)
+* [LAB 7 - Kalman Filter](docs/lab7.md)
+* [LAB 8 - Stunts](docs/lab8.md)
+* [LAB 9 - Mapping](docs/lab9.md)
+* [LAB 10 - Grid Localization using Bayes Filter](docs/lab10.md)
+* [LAB 11 - Localization on the real robot](docs/lab11.md)
+* [LAB 12 - Path Planning and Execution](docs/lab12.md)
+
 # LAB 1: THE ARTEMIS BOARD AND BLUETOOTH
 
 This lab was divided into two parts. The first part of the lab was meant to help us familiarize ourselves with the Arduino IDE ad the Artemis board. The second part of the lab had to do with establishing communication between your computer and teh Artemis board through bluetooth. 
