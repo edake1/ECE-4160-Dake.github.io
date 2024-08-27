@@ -1,4 +1,4 @@
-# All Labs 
+# All Lab Projects
 * [LAB 1 - The Artemis Board and Bluetooth](README.md) 
 * [LAB 2 - IMU](docs/lab2.md)  
 * [LAB 3 - Time-of-flight Sensors](docs/lab3.md)
